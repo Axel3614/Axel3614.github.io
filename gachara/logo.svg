@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#241552"/>
+      <stop offset="1" stop-color="#0a0719"/>
+    </linearGradient>
+    <radialGradient id="alone" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="luce" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fde68a" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff6cc"/>
+      <stop offset="0.5" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect id="forma" width="128" height="128" rx="28" fill="url(#fondo)"/>
+  <circle cx="64" cy="64" r="60" fill="url(#alone)"/>
+  <circle cx="64" cy="64" r="48" fill="none" stroke="#a78bfa" stroke-width="7"/>
+  <circle cx="64" cy="64" r="34" fill="url(#luce)"/>
+  <path d="M0,-6 C0.8,-1.5 1.5,-0.8 6,0 C1.5,0.8 0.8,1.5 0,6 C-0.8,1.5 -1.5,0.8 -6,0 C-1.5,-0.8 -0.8,-1.5 0,-6 Z" fill="url(#oro)" transform="translate(64 64) scale(4.4)"/>
+</svg>
