@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Gachara: back to the app</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+  <!-- Il ritorno dall'accesso con Google per l'app Android. Supabase rimanda
+       qui il browser con un codice (?code=…); questa pagina riapre l'app con
+       gachara://accesso?code=…, e l'app lo scambia con la sessione usando il
+       segreto che ha generato lei (PKCE): il codice da solo non serve a
+       niente. Qui non si salva e non si manda niente. -->
+  <main class="pagina">
+    <header class="testata">
+      <a class="marchio" href="./"><img src="logo.svg" alt=""><span>Gacha<span class="oro">ra</span></span></a>
+    </header>
+
+    <h1 id="titolo">Back to Gachara</h1>
+    <p id="testo">Tap the button to finish signing in inside the app.</p>
+    <p><a class="pulsante" id="apri" href="./">Open Gachara</a></p>
+    <p class="tenue" id="nota">If nothing happens, go back to the Gachara app yourself and try "Sign in with Google" again.</p>
+  </main>
+  <script>
+    (function () {
+      var italiano = (navigator.language || "").toLowerCase().indexOf("it") === 0;
+      var parametri = new URLSearchParams(location.search);
+      var nelFrammento = new URLSearchParams(location.hash.replace(/^#/, ""));
+      var codice = parametri.get("code");
+      var errore = parametri.get("error_description") || parametri.get("error") || nelFrammento.get("error_description") || nelFrammento.get("error");
+      var titolo = document.getElementById("titolo");
+      var testo = document.getElementById("testo");
+      var nota = document.getElementById("nota");
+      var apri = document.getElementById("apri");
+      if (!codice && !errore) {
+        // Aperta a mano, senza venire dall'accesso.
+        titolo.textContent = italiano ? "Niente da fare qui" : "Nothing to do here";
+        testo.textContent = italiano
+          ? "Questa pagina serve solo a tornare nell'app dopo l'accesso con Google."
+          : "This page is only used to go back to the app after signing in with Google.";
+        apri.textContent = italiano ? "Vai al sito di Gachara" : "Go to the Gachara site";
+        nota.textContent = "";
+        return;
+      }
+      var ritorno = "gachara://accesso?" + (codice ? "code=" + encodeURIComponent(codice) : "error_description=" + encodeURIComponent(errore));
+      apri.href = ritorno;
+      if (italiano) {
+        titolo.textContent = "Torna in Gachara";
+        testo.textContent = "Tocca il pulsante per finire l'accesso dentro l'app.";
+        apri.textContent = "Apri Gachara";
+        nota.textContent = "Se non succede niente, torna tu nell'app Gachara e riprova con \"Accedi con Google\".";
+      }
+      // Il codice non resta nella barra degli indirizzi né nella cronologia.
+      try { history.replaceState(null, "", location.pathname); } catch (e) {}
+      // Si prova ad aprire l'app da soli; se il browser vuole un tocco, c'è il pulsante.
+      location.href = ritorno;
+    })();
+  </script>
+</body>
+</html>
