@@ -150,3 +150,161 @@ li {
   font-size: 14px;
   color: var(--tenue);
 }
+
+/* La pagina di download: una scheda per sistema, una accanto all'altra dove
+   c'è spazio, e la tabella di cosa funziona dove. */
+.scarica {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 20px 0 8px;
+}
+
+.scheda {
+  background: var(--pannello);
+  border: 1px solid var(--bordo);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.scheda h2 {
+  margin-top: 0;
+}
+
+.tabella {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.tabella th,
+.tabella td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--bordo);
+  vertical-align: top;
+}
+
+.tabella th {
+  color: var(--tenue);
+  font-weight: 600;
+}
+
+/* La pagina principale: più larga delle altre, con l'apertura a due colonne
+   (testo e foto), le schede a griglia, la galleria e le domande. */
+.pagina.larga {
+  max-width: 1080px;
+}
+
+.apertura {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.apertura h1 {
+  font-size: 44px;
+  letter-spacing: -0.02em;
+}
+
+.grande {
+  font-size: 18px;
+}
+
+.foto,
+.galleria img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--bordo);
+  border-radius: 12px;
+  background: var(--pannello);
+}
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 16px 0 8px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+}
+
+.scheda p:last-child {
+  margin-bottom: 0;
+}
+
+.galleria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin: 16px 0 8px;
+}
+
+.galleria figure {
+  margin: 0;
+}
+
+.galleria figure.stretta {
+  max-width: 240px;
+}
+
+.galleria figcaption {
+  color: var(--tenue);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+details {
+  border-bottom: 1px solid var(--bordo);
+  padding: 12px 0;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+details p {
+  margin: 10px 0 0;
+  color: var(--tenue);
+}
+
+/* Le due lingue nella stessa pagina: si vede quella scelta (inglese se il
+   codice della pagina non è partito). */
+html:not([data-lingua="it"]) [lang="it"],
+html[data-lingua="it"] [lang="en"] {
+  display: none;
+}
+
+.lingua {
+  background: transparent;
+  border: 1px solid var(--bordo);
+  color: var(--tenue);
+  border-radius: 6px;
+  padding: 2px 8px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.lingua:hover {
+  color: var(--testo);
+}
+
+@media (max-width: 760px) {
+  .apertura {
+    grid-template-columns: 1fr;
+  }
+
+  .apertura h1 {
+    font-size: 34px;
+  }
+}

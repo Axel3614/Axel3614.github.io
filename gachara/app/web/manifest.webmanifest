@@ -1,0 +1,14 @@
+{
+  "name": "Gachara",
+  "short_name": "Gachara",
+  "description": "Your gacha companion: one tier list, your box, and advice built on the characters you own.",
+  "start_url": "../",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#0b0b12",
+  "theme_color": "#0b0b12",
+  "icons": [
+    { "src": "icona-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icona-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

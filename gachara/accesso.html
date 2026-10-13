@@ -46,7 +46,21 @@
         nota.textContent = "";
         return;
       }
-      var ritorno = "gachara://accesso?" + (codice ? "code=" + encodeURIComponent(codice) : "error_description=" + encodeURIComponent(errore));
+      var coda = codice ? "code=" + encodeURIComponent(codice) : "error_description=" + encodeURIComponent(errore);
+      // L'accesso partito dalla web app (che prima di andare da Google lascia
+      // un segno nella memoria del browser): si torna lì, non nell'app Android.
+      // Solo a un indirizzo di questo stesso sito, sotto /gachara/app/.
+      try {
+        var web = localStorage.getItem("gachara:accesso-web");
+        if (web) {
+          localStorage.removeItem("gachara:accesso-web");
+          if (web.indexOf(location.origin + "/gachara/app/") === 0) {
+            location.replace(web + "?" + coda);
+            return;
+          }
+        }
+      } catch (e) {}
+      var ritorno = "gachara://accesso?" + coda;
       apri.href = ritorno;
       if (italiano) {
         titolo.textContent = "Torna in Gachara";
