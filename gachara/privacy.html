@@ -24,7 +24,7 @@
     <p class="tenue">Last updated: 13 October 2026</p>
 
     <div class="riquadro">
-      <p><strong>In short:</strong> Gachara works on your PC. Unless you choose to send a report or sign in, nothing about you leaves your computer. We don't show ads, we don't sell or share your data, and we never read your games' memory or network traffic.</p>
+      <p><strong>In short:</strong> Gachara works on your PC. Unless you choose to send a report or sign in, nothing about you leaves your computer. The only thing the app sends by itself is an anonymous "opened today" count, with nothing that identifies you, which you can turn off. We don't show ads, we don't sell or share your data, and we never read your games' memory or network traffic.</p>
     </div>
 
     <h2>Who we are</h2>
@@ -57,6 +57,15 @@
     </ul>
     <p>Reports are stored in our database at Supabase, our database provider. Other players can see the team, items and attempts you shared; your free text is shown only after we review it; screenshots are never shown publicly. A screenshot may contain your in-game name: crop it if you prefer.</p>
 
+    <h2>Anonymous usage count</h2>
+    <p>To know how many people use Gachara, the app tells our server that it was opened: once a day, the first time you open it that day. This applies to the Windows app, the Android app and the web app. What is sent:</p>
+    <ul>
+      <li>the Gachara version and whether it is the Windows app, the Android app or the web app;</li>
+      <li>three yes-or-no answers worked out on your device: whether this is your first opening of the week, of the month, and ever.</li>
+    </ul>
+    <p>Nothing else is sent: no name, no account, no installation number, nothing about your games or your device. The server only adds one to a daily total and stores no record of who was counted, nor your IP address. The dates of the last day counted stay on your device and are never sent. You can turn the count off in Settings, under "Anonymous usage count".</p>
+    <p>This website counts the same way: one visit a day per browser, and the clicks on the download and "Open Gachara" buttons, as daily totals with no identifier and no cookies. It doesn't count browsers that ask not to be tracked ("Do Not Track").</p>
+
     <h2>Optional account: Sign in with Google</h2>
     <p>Gachara works fully without an account. If you choose to sign in with Google, to keep your progress the same on all your devices:</p>
     <ul>
@@ -73,6 +82,7 @@
       <li>Data on your PC: until you delete it.</li>
       <li>Account data: until you delete your account.</li>
       <li>Reports: until they are removed, by us or at your request.</li>
+      <li>Usage count: only daily totals, which can't be linked to anyone.</li>
     </ul>
 
     <h2>Your rights</h2>

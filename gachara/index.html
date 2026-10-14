@@ -32,7 +32,7 @@
       <nav class="menu">
         <a href="./" aria-current="page">Home</a>
         <a href="download.html">Download</a>
-        <a href="app/"><span lang="en">Open in browser</span><span lang="it">Apri nel browser</span></a>
+        <a data-conta="clic-web" href="app/"><span lang="en">Open in browser</span><span lang="it">Apri nel browser</span></a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html"><span lang="en">Terms</span><span lang="it">Termini</span></a>
         <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
@@ -51,7 +51,7 @@
         </p>
         <p>
           <a class="pulsante" href="download.html"><span lang="en">Download for Windows or Android</span><span lang="it">Scarica per Windows o Android</span></a>
-          <a class="pulsante secondario" href="app/"><span lang="en">Use it in your browser</span><span lang="it">Usala nel browser</span></a>
+          <a class="pulsante secondario" data-conta="clic-web" href="app/"><span lang="en">Use it in your browser</span><span lang="it">Usala nel browser</span></a>
         </p>
         <p class="tenue">
           <span lang="en">Free, no ads, no account needed. NIKKE, Dragon Ball Z Dokkan Battle, Chaos Zero Nightmare and Brown Dust 2.</span>
@@ -124,7 +124,7 @@
       <section class="scheda">
         <h3><span lang="en">In your browser</span><span lang="it">Nel browser</span></h3>
         <p><span lang="en">Nothing to install, on any device, iPhone included. Tier lists, builds, guides and checklists; your box by hand or from your account.</span><span lang="it">Niente da installare, su qualunque dispositivo, iPhone compreso. Tier list, build, guide e checklist; il box a mano o dal tuo account.</span></p>
-        <p><a href="app/"><span lang="en">Open Gachara</span><span lang="it">Apri Gachara</span></a></p>
+        <p><a data-conta="clic-web" href="app/"><span lang="en">Open Gachara</span><span lang="it">Apri Gachara</span></a></p>
       </section>
     </div>
     <p class="tenue"><span lang="en">See <a href="download.html">what works where</a>.</span><span lang="it">Guarda <a href="download.html">cosa funziona dove</a>.</span></p>
@@ -184,5 +184,6 @@
       });
     })();
   </script>
+  <script src="conta.js" defer></script>
 </body>
 </html>
