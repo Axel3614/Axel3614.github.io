@@ -191,6 +191,28 @@ li {
   font-weight: 600;
 }
 
+/* Sul telefono le cinque colonne di "cosa funziona dove" stanno strette:
+   testo più piccolo e, se non basta, la tabella scorre da sola (la pagina
+   no). */
+.scorre {
+  overflow-x: auto;
+}
+
+@media (max-width: 560px) {
+  .tabella {
+    font-size: 13px;
+  }
+
+  .tabella th,
+  .tabella td {
+    padding: 6px 5px;
+  }
+
+  .tabella td:first-child {
+    min-width: 130px;
+  }
+}
+
 /* La pagina principale: più larga delle altre, con l'apertura a due colonne
    (testo e foto), le schede a griglia, la galleria e le domande. */
 .pagina.larga {
@@ -275,6 +297,12 @@ details summary {
 details p {
   margin: 10px 0 0;
   color: var(--tenue);
+}
+
+/* Gli indirizzi scritti per intero (la sorgente di AltStore, accesso.html):
+   sul telefono vanno a capo invece di uscire dalla pagina. */
+code {
+  overflow-wrap: anywhere;
 }
 
 /* Le due lingue nella stessa pagina: si vede quella scelta (inglese se il

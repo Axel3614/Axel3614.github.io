@@ -7,6 +7,17 @@
   <meta name="description" content="Download Gachara for Windows, Android or iPhone, or use it in your browser: always the latest version, in one place.">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../stile.css">
+  <!-- La lingua della pagina (lingua.js, come la home): inglese, o italiano per chi ha il browser in italiano o l'ha
+       scelto. -->
+  <script>
+    (function () {
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var lingua = scelta || ((navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+      document.documentElement.setAttribute("data-lingua", lingua === "it" ? "it" : "en");
+      document.documentElement.lang = lingua === "it" ? "it" : "en";
+    })();
+  </script>
 </head>
 <body>
   <main class="pagina">
@@ -16,81 +27,156 @@
         <a href="./">Home</a>
         <a href="download.html" aria-current="page">Download</a>
         <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="terms.html"><span lang="en">Terms</span><span lang="it">Termini</span></a>
+        <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
       </nav>
     </header>
 
-    <!-- La versione e i due collegamenti li scrive scripts/pubblica-sito.mjs a ogni pubblicazione (i segni tra
-         doppie graffe): questa pagina è il posto unico da cui si scarica Gachara, sempre l'ultima versione. -->
-    <h1>Download Gachara</h1>
-    <p>Version <strong>0.22.0</strong>, published on 14 October 2026. Windows, Android and the browser run the same Gachara and are always released together. It's free, with no ads.</p>
+    <!-- La versione e i collegamenti li scrive scripts/pubblica-sito.mjs a ogni pubblicazione (i segni tra doppie
+         graffe): questa pagina è il posto unico da cui si scarica Gachara, sempre l'ultima versione. -->
+    <h1><span lang="en">Download Gachara</span><span lang="it">Scarica Gachara</span></h1>
+    <p>
+      <span lang="en">Version <strong>0.22.1</strong>, published on 14 October 2026. Windows, Android, iPhone and the browser run the same Gachara and are always released together. It's free, with no ads.</span>
+      <span lang="it">Versione <strong>0.22.1</strong>, pubblicata il 14 ottobre 2026. Windows, Android, iPhone e il browser sono la stessa Gachara ed escono sempre insieme. È gratis, senza pubblicità.</span>
+    </p>
 
     <div class="scarica">
       <section class="scheda">
         <h2>Windows</h2>
-        <p><a class="pulsante" data-conta="clic-windows" href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.0/Gachara-Setup-0.22.0.exe">Download for Windows</a></p>
-        <p class="tenue">Windows 10 or 11. Run the installer; it isn't signed yet, so SmartScreen asks once: "More info" → "Run anyway".</p>
-        <p class="tenue"><strong>Updates by itself:</strong> once installed, it downloads new versions and asks you to restart.</p>
-        <p class="tenue"><strong>For phone-only games (Dokkan Battle):</strong> Gachara reads them from your phone shown in a window on the PC. For Android everything is in this download: it includes <a href="https://github.com/Genymobile/scrcpy">scrcpy</a> (free and open source), and a button in Gachara opens it. For an iPhone, also install <a href="https://www.3u.com/airPlayer">3uAirPlayer</a> from its official site: it isn't ours to redistribute.</p>
+        <p><a class="pulsante" data-conta="clic-windows" href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.1/Gachara-Setup-0.22.1.exe"><span lang="en">Download for Windows</span><span lang="it">Scarica per Windows</span></a></p>
+        <p class="tenue">
+          <span lang="en">Windows 10 or 11. Run the installer; it isn't signed yet, so SmartScreen asks once: "More info" → "Run anyway".</span>
+          <span lang="it">Windows 10 o 11. Apri l'installazione; non è ancora firmata, quindi SmartScreen chiede una volta: "Ulteriori informazioni" → "Esegui comunque".</span>
+        </p>
+        <p class="tenue">
+          <span lang="en"><strong>Updates by itself:</strong> it downloads new versions in the background and puts them in place when you restart or close it, with no installer windows.</span>
+          <span lang="it"><strong>Si aggiorna da sola:</strong> scarica le versioni nuove in sottofondo e le mette al loro posto quando la riavvii o la chiudi, senza finestre dell'installazione.</span>
+        </p>
+        <p class="tenue">
+          <span lang="en"><strong>For phone-only games (Dokkan Battle):</strong> Gachara reads them from your phone shown in a window on the PC. For Android everything is in this download: it includes <a href="https://github.com/Genymobile/scrcpy">scrcpy</a> (free and open source), and a button in Gachara opens it. For an iPhone, also install <a href="https://www.3u.com/airPlayer">3uAirPlayer</a> from its official site: it isn't ours to redistribute.</span>
+          <span lang="it"><strong>Per i giochi che sono solo sul telefono (Dokkan Battle):</strong> Gachara li legge dal telefono mostrato in una finestra sul PC. Per Android c'è tutto in questo download: comprende <a href="https://github.com/Genymobile/scrcpy">scrcpy</a> (libero e gratuito), e un pulsante in Gachara lo apre. Per un iPhone installa anche <a href="https://www.3u.com/airPlayer">3uAirPlayer</a> dal suo sito ufficiale: non possiamo distribuirlo noi.</span>
+        </p>
       </section>
       <section class="scheda">
         <h2>Android</h2>
-        <p><a class="pulsante" data-conta="clic-android" href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.0/Gachara-0.22.0.apk">Download for Android</a></p>
-        <p class="tenue">Android 7 or later. Open the downloaded file and allow your browser to install apps when Android asks (it isn't on the Play Store).</p>
-        <p class="tenue"><strong>Updates by itself:</strong> it downloads its new pages and restarts in a second. When a new APK is needed it installs it for you (Android asks once to allow Gachara to install updates). Your data stays.</p>
+        <p><a class="pulsante" data-conta="clic-android" href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.1/Gachara-0.22.1.apk"><span lang="en">Download for Android</span><span lang="it">Scarica per Android</span></a></p>
+        <p class="tenue">
+          <span lang="en">Android 7 or later. Open the downloaded file and allow your browser to install apps when Android asks (it isn't on the Play Store).</span>
+          <span lang="it">Android 7 o successivo. Apri il file scaricato e permetti al browser di installare app quando Android lo chiede (non è sul Play Store).</span>
+        </p>
+        <p class="tenue">
+          <span lang="en"><strong>Updates by itself:</strong> it downloads its new pages and restarts in a second. When a new APK is needed it installs it for you (Android asks once to allow Gachara to install updates). Your data stays.</span>
+          <span lang="it"><strong>Si aggiorna da sola:</strong> scarica le sue pagine nuove e si riavvia in un attimo. Quando serve un APK nuovo lo installa lei (Android chiede una volta di permettere a Gachara di installare aggiornamenti). I tuoi dati restano.</span>
+        </p>
+      </section>
+      <!-- id "iphone": dove portavano i collegamenti di prima (la parte iPhone di questa pagina, dall'app fino alla 0.22.0). -->
+      <section class="scheda" id="iphone">
+        <h2>iPhone</h2>
+        <p><a class="pulsante" data-conta="clic-ios" href="iphone.html"><span lang="en">Install on iPhone</span><span lang="it">Installa su iPhone</span></a></p>
+        <p class="tenue">
+          <span lang="en">iPhone and iPad with iOS 15 or later. It isn't on the App Store: you install it for free with AltStore or SideStore and your own Apple ID. The button opens the steps.</span>
+          <span lang="it">iPhone e iPad con iOS 15 o successivo. Non è sull'App Store: la installi gratis con AltStore o SideStore e il tuo ID Apple. Il pulsante apre i passi da seguire.</span>
+        </p>
+        <p class="tenue">
+          <span lang="en"><strong>Updates by itself:</strong> it downloads its new pages and restarts in a second; a new app, rarely, comes through AltStore. Your data stays.</span>
+          <span lang="it"><strong>Si aggiorna da sola:</strong> scarica le sue pagine nuove e si riavvia in un attimo; un'app nuova, di rado, arriva da AltStore. I tuoi dati restano.</span>
+        </p>
       </section>
       <section class="scheda">
-        <h2>In your browser</h2>
-        <p><a class="pulsante" data-conta="clic-web" href="app/">Open Gachara</a></p>
-        <p class="tenue">Nothing to install, on any device, iPhone included: to keep it like an app, use "Add to Home Screen" from your browser's menu.</p>
-        <p class="tenue"><strong>Always the latest version.</strong> It reads your Dokkan box from a screen recording you pick; for the other games sign in with Google to bring your progress from the Windows or Android app, or mark what you own by hand.</p>
+        <h2><span lang="en">In your browser</span><span lang="it">Nel browser</span></h2>
+        <p><a class="pulsante" data-conta="clic-web" href="app/"><span lang="en">Open Gachara</span><span lang="it">Apri Gachara</span></a></p>
+        <p class="tenue">
+          <span lang="en">Nothing to install, on any device: to keep it like an app, use "Add to Home Screen" from your browser's menu.</span>
+          <span lang="it">Niente da installare, su qualunque dispositivo: per tenerla come un'app, usa "Aggiungi a schermata Home" dal menu del browser.</span>
+        </p>
+        <p class="tenue">
+          <span lang="en"><strong>Always the latest version.</strong> It reads your Dokkan box from a screen recording you pick; for the other games sign in with Google to bring your progress from the apps, or mark what you own by hand.</span>
+          <span lang="it"><strong>Sempre l'ultima versione.</strong> Legge il tuo box di Dokkan da una registrazione dello schermo che scegli; per gli altri giochi accedi con Google per portare i progressi dalle app, o segna a mano quello che hai.</span>
+        </p>
       </section>
     </div>
 
-    <h2>What works where</h2>
-    <p>The phone app is made to be used on its own, without a PC. It is newer than the Windows one and still catching up:</p>
-    <table class="tabella">
+    <h2><span lang="en">What works where</span><span lang="it">Cosa funziona dove</span></h2>
+    <p>
+      <span lang="en">The phone apps are made to be used on their own, without a PC. They are newer than the Windows one and still catching up:</span>
+      <span lang="it">Le app per telefono sono fatte per essere usate da sole, senza PC. Sono più nuove di quella per Windows e la stanno ancora raggiungendo:</span>
+    </p>
+    <div class="scorre"><table class="tabella">
       <thead>
         <tr><th></th><th>Windows</th><th>Android</th><th>iPhone</th><th>Browser</th></tr>
       </thead>
       <tbody>
-        <tr><td>Tier lists, builds, guides, team advice, checklists, pulls</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-        <tr><td>Game data updated every day by itself</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Built in, updated with each version</td></tr>
-        <tr><td>NIKKE: your box from the official site (Blablalink)</td><td>Yes</td><td>Yes (new, being tested)</td><td>Not yet</td><td>No</td></tr>
-        <tr><td>Dokkan Battle: your box read from the screen</td><td>Yes</td><td>Yes, live or from a screen recording (new, being tested)</td><td>From a screen recording (new)</td><td>From a screen recording (new)</td></tr>
-        <tr><td>Chaos Zero Nightmare and Brown Dust 2: your box read from the screen</td><td>Yes</td><td>Not yet</td><td>Not yet</td><td>No</td></tr>
-        <tr><td>Event calendar (NIKKE, Brown Dust 2)</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-        <tr><td>Dokkan: bosses, Extreme Z-Battles, Ultimate Clash and Frontier fetched on demand</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
-        <tr><td>Overlay above the game, notifications, backups</td><td>Yes</td><td>Not yet</td><td>Not yet</td><td>No</td></tr>
-        <tr><td>Your box marked by hand</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
-        <tr><td>Same progress on all your devices (optional Google sign-in)</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes (new, being tested)</td></tr>
+        <tr>
+          <td><span lang="en">Tier lists, builds, guides, team advice, checklists, pulls</span><span lang="it">Tier list, build, guide, consigli per i team, checklist, pull</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+        </tr>
+        <tr>
+          <td><span lang="en">Game data updated every day by itself</span><span lang="it">Dati dei giochi aggiornati da soli ogni giorno</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Built in, updated with each version</span><span lang="it">Inclusi, aggiornati a ogni versione</span></td>
+        </tr>
+        <tr>
+          <td><span lang="en">NIKKE: your box from the official site (Blablalink)</span><span lang="it">NIKKE: il tuo box dal sito ufficiale (Blablalink)</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Yes (new, being tested)</span><span lang="it">Sì (nuovo, in prova)</span></td>
+          <td><span lang="en">Not yet</span><span lang="it">Non ancora</span></td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Dokkan Battle: your box read from the screen</span><span lang="it">Dokkan Battle: il tuo box letto dallo schermo</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Yes, live or from a screen recording (new, being tested)</span><span lang="it">Sì, dal vivo o da una registrazione dello schermo (nuovo, in prova)</span></td>
+          <td><span lang="en">From a screen recording (new)</span><span lang="it">Da una registrazione dello schermo (nuovo)</span></td>
+          <td><span lang="en">From a screen recording (new)</span><span lang="it">Da una registrazione dello schermo (nuovo)</span></td>
+        </tr>
+        <tr>
+          <td><span lang="en">Chaos Zero Nightmare and Brown Dust 2: your box read from the screen</span><span lang="it">Chaos Zero Nightmare e Brown Dust 2: il tuo box letto dallo schermo</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Not yet</span><span lang="it">Non ancora</span></td><td><span lang="en">Not yet</span><span lang="it">Non ancora</span></td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Event calendar (NIKKE, Brown Dust 2)</span><span lang="it">Calendario degli eventi (NIKKE, Brown Dust 2)</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td>Brown Dust 2</td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Dokkan: bosses, Extreme Z-Battles, Ultimate Clash and Frontier fetched on demand</span><span lang="it">Dokkan: boss, Extreme Z-Battle, Ultimate Clash e Frontier scaricati quando servono</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Notifications (banners worth pulling, deadlines)</span><span lang="it">Notifiche (banner che valgono, scadenze)</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes (new)</span><span lang="it">Sì (nuove)</span></td><td><span lang="en">Yes (new)</span><span lang="it">Sì (nuove)</span></td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Overlay above the game, backups</span><span lang="it">Overlay sopra il gioco, copie di sicurezza</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Not yet</span><span lang="it">Non ancora</span></td><td><span lang="en">Not yet</span><span lang="it">Non ancora</span></td><td>No</td>
+        </tr>
+        <tr>
+          <td><span lang="en">Your box marked by hand</span><span lang="it">Il tuo box segnato a mano</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+        </tr>
+        <tr>
+          <td><span lang="en">Same progress on all your devices (optional Google sign-in)</span><span lang="it">Gli stessi progressi su tutti i tuoi dispositivi (accesso con Google facoltativo)</span></td>
+          <td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td><td><span lang="en">Yes</span><span lang="it">Sì</span></td>
+          <td><span lang="en">Yes (new, being tested)</span><span lang="it">Sì (nuovo, in prova)</span></td>
+        </tr>
       </tbody>
-    </table>
+    </table></div>
 
-    <!-- La parte iPhone: la riempie scripts/pubblica-sito.mjs dall'ultima versione con l'IPA (le IPA non escono a ogni
-         versione); finché non ce n'è nessuna si vede solo il paragrafo sotto. -->
-    <h2 id="iphone">iPhone and iPad</h2>
-    <div >
-      <p>Gachara for iPhone and iPad (app version 0.22.0, iOS 15 or later) isn't on the App Store: that needs a paid developer account, and Gachara is a free hobby project. You install it yourself, free, with your own Apple ID:</p>
-      <ol>
-        <li>Install <a href="https://altstore.io">AltStore</a> (it uses AltServer on your PC or Mac) or <a href="https://sidestore.io">SideStore</a> (it works from the phone alone after the first setup).</li>
-        <li>Add the Gachara source: <a class="pulsante" href="altstore://source?url=https://axel3614.github.io/gachara/altstore.json">Add to AltStore</a> or paste <code>https://axel3614.github.io/gachara/altstore.json</code> in "Sources".</li>
-        <li>Install Gachara from that source. Or download <a data-conta="clic-ios" href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.0/Gachara-0.22.0.ipa">the app file (IPA)</a> and open it with AltStore, SideStore or Sideloadly.</li>
-      </ol>
-      <p class="tenue"><strong>Every 7 days</strong> the free Apple ID signature expires and has to be refreshed: AltStore does it by itself when your PC with AltServer is on the same Wi-Fi, SideStore on the phone. If it expires, Gachara won't open until you refresh it, but your box and settings stay. Deleting the app deletes them: sign in with Google and they come back.</p>
-      <p class="tenue"><strong>Updates by itself:</strong> Gachara downloads its new pages and restarts in a second. When a new app is needed (rarely), AltStore or SideStore shows the update from the source.</p>
-      <p class="tenue"><strong>Your Dokkan box from a screen recording:</strong> record your screen (Control Center → Screen Recording) while you scroll your cards in the game, then pick the video in Gachara → Screen Reader. <strong>Not yet on iPhone:</strong> Chaos Zero Nightmare and Brown Dust 2 from the screen, and the NIKKE official site inside the app: sign in with Google to bring that box from Gachara for Windows or Android, or mark it by hand.</p>
-    </div>
-    <p hidden>The iPhone app is on its way. Until then, on an iPhone or iPad use <a href="app/">Gachara in the browser</a> and add it to your Home Screen.</p>
-
-    <h2>Older versions and release notes</h2>
-    <p>Every version, with its files, is on <a href="https://github.com/Axel3614/gachadex-releases/releases">the releases page</a>.</p>
+    <h2><span lang="en">Older versions and release notes</span><span lang="it">Versioni precedenti e note di rilascio</span></h2>
+    <p>
+      <span lang="en">Every version, with its files, is on <a href="https://github.com/Axel3614/gachadex-releases/releases">the releases page</a>.</span>
+      <span lang="it">Ogni versione, con i suoi file, è nella <a href="https://github.com/Axel3614/gachadex-releases/releases">pagina delle versioni</a>.</span>
+    </p>
 
     <footer class="piede">
-      <p>Gachara is an independent hobby project by Axel394. It isn't affiliated with or endorsed by the developers or publishers of the games it supports; game names and images belong to their owners.</p>
-      <p><a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a> · <a href="https://github.com/Axel3614/gachadex-releases/issues">Contact</a></p>
+      <p>
+        <span lang="en">Gachara is an independent hobby project by Axel394. It isn't affiliated with or endorsed by the developers or publishers of the games it supports; game names and images belong to their owners.</span>
+        <span lang="it">Gachara è un progetto indipendente e amatoriale di Axel394. Non è affiliata né approvata dagli sviluppatori o dagli editori dei giochi che supporta; nomi e immagini dei giochi sono dei loro proprietari.</span>
+      </p>
+      <p><a href="privacy.html"><span lang="en">Privacy policy</span><span lang="it">Privacy</span></a> · <a href="terms.html"><span lang="en">Terms of use</span><span lang="it">Termini d'uso</span></a> · <a href="https://github.com/Axel3614/gachadex-releases/issues"><span lang="en">Contact</span><span lang="it">Contatti</span></a></p>
     </footer>
   </main>
+  <script src="lingua.js" defer></script>
   <script src="conta.js" defer></script>
 </body>
 </html>

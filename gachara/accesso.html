@@ -27,7 +27,11 @@
   </main>
   <script>
     (function () {
-      var italiano = (navigator.language || "").toLowerCase().indexOf("it") === 0;
+      // La lingua scelta con il pulsante del sito, se no quella del browser.
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var italiano = scelta ? scelta === "it" : (navigator.language || "").toLowerCase().indexOf("it") === 0;
+      document.documentElement.lang = italiano ? "it" : "en";
       var parametri = new URLSearchParams(location.search);
       var nelFrammento = new URLSearchParams(location.hash.replace(/^#/, ""));
       var codice = parametri.get("code");

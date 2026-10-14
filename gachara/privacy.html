@@ -7,8 +7,20 @@
   <meta name="description" content="What Gachara stores, where, and what it never touches.">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../stile.css">
+  <script>
+    (function () {
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var lingua = scelta || ((navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+      document.documentElement.setAttribute("data-lingua", lingua === "it" ? "it" : "en");
+      document.documentElement.lang = lingua === "it" ? "it" : "en";
+    })();
+  </script>
 </head>
 <body>
+  <!-- La privacy in due lingue: il testo inglese e quello italiano sono due blocchi interi (più comodo da tenere
+       allineato di una frase alla volta). Se cambia quello che l'app manda fuori dal dispositivo, si cambiano tutti e
+       due e la data in cima. -->
   <main class="pagina">
     <header class="testata">
       <a class="marchio" href="./"><img src="logo.svg" alt=""><span>Gacha<span class="oro">ra</span></span></a>
@@ -16,88 +28,181 @@
         <a href="./">Home</a>
         <a href="download.html">Download</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="terms.html"><span lang="en">Terms</span><span lang="it">Termini</span></a>
+        <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
       </nav>
     </header>
 
-    <h1>Privacy policy</h1>
-    <p class="tenue">Last updated: 13 October 2026</p>
+    <div lang="en">
+      <h1>Privacy policy</h1>
+      <p class="tenue">Last updated: 14 October 2026</p>
 
-    <div class="riquadro">
-      <p><strong>In short:</strong> Gachara works on your PC. Unless you choose to send a report or sign in, nothing about you leaves your computer. The only thing the app sends by itself is an anonymous "opened today" count, with nothing that identifies you, which you can turn off. We don't show ads, we don't sell or share your data, and we never read your games' memory or network traffic.</p>
+      <div class="riquadro">
+        <p><strong>In short:</strong> Gachara works on your device, PC or phone. Unless you choose to send a report or sign in, nothing about you leaves it. The only thing the app sends by itself is an anonymous "opened today" count, with nothing that identifies you, which you can turn off. We don't show ads, we don't sell or share your data, and we never read your games' memory or network traffic.</p>
+      </div>
+
+      <h2>Who we are</h2>
+      <p>Gachara is a free, independent hobby project made by Axel394 in Italy. For any question about your data, or to ask us to see or delete it, <a href="https://github.com/Axel3614/gachadex-releases/issues">open an issue on GitHub</a>. Issues are public: don't write personal details there, just tell us what you need and we'll reply on how to proceed privately.</p>
+
+      <h2>What stays on your device</h2>
+      <p>Everything Gachara needs to work is stored on your device and is never sent to us: on the PC in Gachara's folder, in the Android and iPhone apps in the app's own storage, in the web app in your browser.</p>
+      <ul>
+        <li>your box (the characters you own and their levels, gear and other details), your settings, checklists, pull numbers and summon history;</li>
+        <li>the guide data Gachara downloads, and screen captures you take with it;</li>
+        <li>if you use the Windows app in Italian, the translations of guide and news texts: they are made on your PC by a translation engine that comes with the app (the one Firefox uses), and no text is sent anywhere to be translated;</li>
+        <li>the sessions of the official game websites you sign in to inside Gachara (for example Blablalink for NIKKE). You sign in directly with those sites: Gachara never sees or stores your password, and it only reads what the page shows you;</li>
+        <li>on the phone, the notifications Gachara prepares for the next three days (a Solo Raid that ends, a banner worth pulling, a Dokkan deadline): your phone keeps them and shows them at the right time, with no server in between.</li>
+      </ul>
+      <p>Deleting the app removes all of it: on the PC, uninstall Gachara and delete its folder (Settings → "Open the Gachara data folder"); on a phone, uninstall the app; in the browser, clear this site's data.</p>
+
+      <h2>Reading the game screen</h2>
+      <p>If you turn on Screen Reader, Gachara looks at the game window you choose, every few seconds, to read your box and similar screens. The images are processed on your PC and are never stored online or sent anywhere. Gachara doesn't record other windows, doesn't read the game's memory or network traffic, and never taps or plays for you.</p>
+      <p>On the Android app, Screen Reader uses Android's own screen sharing: you start it, Android asks you what to share and shows that sharing is on, and you stop it whenever you want. The images are processed on your phone and are never stored or sent anywhere.</p>
+      <p>You can also pick a screen recording you made yourself. That's how it works on iPhone, where an app can't look at the screen while you play, and it works on Android and in the web app too. The video is read on your device, frame by frame, and Gachara never uploads it, copies it or keeps it.</p>
+      <p>The official game websites open inside the phone apps exactly as on the PC: you sign in with the site, and Gachara only reads what the page shows you.</p>
+
+      <h2>Public websites Gachara visits</h2>
+      <p>To keep guides and game data current, Gachara downloads public pages and images from guide and database sites (such as Prydwen, nikkers.cc, Loot &amp; Waifus, DokkanStats, dokkaninfo, Nikke-db, BD2DB and Banner Recommendation) and the public news of the official game websites (such as the Brown Dust 2 news). Most days the game data comes as a ready-made package from the same public GitHub repository as the app (refreshed once a day), and the sites above are visited only when that package is missing or out of date. The phone apps do the same from your phone. Like any visit from a browser, those sites see your IP address; their own privacy policies apply. Gachara sends them nothing about you.</p>
+
+      <h2>App updates</h2>
+      <p>The Windows, Android and iPhone apps ask GitHub, where the downloads are hosted, whether a newer version exists, and download it from there. These requests carry no data about you.</p>
+      <p>On iPhone you install Gachara with AltStore or SideStore, which read the list of Gachara versions on this site (<code>altstore.json</code>) to find updates. They sign the app with your Apple ID: that happens between them and Apple, and Gachara never sees your Apple ID or password.</p>
+
+      <h2>Reports you choose to send</h2>
+      <p>The Feedback section, on the PC, on the phone and in the web app, lets you share how you cleared a stage, report a problem or suggest an idea. Nothing is sent until you press "Send". What is sent:</p>
+      <ul>
+        <li>what you filled in (for example the team, items, number of attempts and your notes) and, if you add one, a screenshot;</li>
+        <li>the Gachara version and a random number created by your installation, used only to limit spam and to avoid counting the same player twice. It doesn't identify you;</li>
+        <li>for a problem report, unless you untick it, technical info to understand what went wrong: the version of Windows or of your phone's system, screen size and scaling, app language, how many cards your box has, the app's own error messages of the last two days (with your Windows user name removed from file paths) and, if Screen Reader is on, its state (the window title only if you picked the window yourself) and, if you didn't add a screenshot, the picture of the game window it is reading (for Brown Dust 2 only the list of your costumes, never the character art). You can see all of it before sending.</li>
+      </ul>
+      <p>Reports are stored in our database at Supabase, our database provider. Other players can see the team, items and attempts you shared; your free text is shown only after we review it; screenshots are never shown publicly. A screenshot may contain your in-game name: crop it if you prefer.</p>
+
+      <h2>Anonymous usage count</h2>
+      <p>To know how many people use Gachara, the app tells our server that it was opened: once a day, the first time you open it that day. This applies to the Windows app, the Android app, the iPhone app and the web app. What is sent:</p>
+      <ul>
+        <li>the Gachara version and which of them it is (Windows, Android, iPhone or web app);</li>
+        <li>three yes-or-no answers worked out on your device: whether this is your first opening of the week, of the month, and ever.</li>
+      </ul>
+      <p>Nothing else is sent: no name, no account, no installation number, nothing about your games or your device. The server only adds one to a daily total and stores no record of who was counted, nor your IP address. The dates of the last day counted stay on your device and are never sent. You can turn the count off in Settings, under "Anonymous usage count".</p>
+      <p>This website counts the same way: one visit a day per browser, and the clicks on the download and "Open Gachara" buttons, as daily totals with no identifier and no cookies. It doesn't count browsers that ask not to be tracked ("Do Not Track").</p>
+
+      <h2>Optional account: Sign in with Google</h2>
+      <p>Gachara works fully without an account. If you choose to sign in with Google, to keep your progress the same on all your devices:</p>
+      <ul>
+        <li><strong>What we receive from Google:</strong> your Google account identifier, email address, name and profile picture link (the basic "openid", "email" and "profile" permissions). We don't ask for, and can't access, your Gmail, Drive, contacts or any other Google data.</li>
+        <li><strong>What we use it for:</strong> only to recognise your account and keep your Gachara progress (box, checklists, cleared stages, pull numbers and settings) in sync between your devices. Website sessions, screen captures and recordings are never synced.</li>
+        <li><strong>Where it is stored:</strong> in our database at Supabase, which handles the sign-in for us.</li>
+        <li><strong>Deleting it:</strong> you can delete your account and all its synced data from Gachara's Settings at any time, or ask us to do it.</li>
+        <li><strong>On the Android and iPhone apps:</strong> after you sign in with Google in your browser, a page of this site (<code>accesso.html</code>) sends you back to the app with a one-time sign-in code in its address; the page stores nothing, and the code is useless without a secret that never leaves the app.</li>
+      </ul>
+      <p>Gachara's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We never use this information for advertising and never sell or transfer it to others.</p>
+
+      <h2>How long we keep data</h2>
+      <ul>
+        <li>Data on your device: until you delete it.</li>
+        <li>Account data: until you delete your account.</li>
+        <li>Reports: until they are removed, by us or at your request.</li>
+        <li>Usage count: only daily totals, which can't be linked to anyone.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>Under the EU General Data Protection Regulation you can ask to access, correct, export or delete your data, and you can withdraw your consent at any time by deleting your account or asking us. If you think we handle your data wrongly, you can also complain to a data protection authority; in Italy that is the Garante per la protezione dei dati personali.</p>
+      <p>We process account data and reports because you choose to use those features (your consent), and update checks because the app needs them to stay up to date.</p>
+
+      <h2>Children</h2>
+      <p>If you are under 14, please ask a parent or guardian before signing in or sending reports.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we'll update the date at the top of this page, and important changes will be announced in the app.</p>
     </div>
 
-    <h2>Who we are</h2>
-    <p>Gachara is a free, independent hobby project made by Axel394 in Italy. For any question about your data, or to ask us to see or delete it, <a href="https://github.com/Axel3614/gachadex-releases/issues">open an issue on GitHub</a>. Issues are public: don't write personal details there, just tell us what you need and we'll reply on how to proceed privately.</p>
+    <div lang="it">
+      <h1>Informativa sulla privacy</h1>
+      <p class="tenue">Ultimo aggiornamento: 14 ottobre 2026</p>
 
-    <h2>What stays on your PC</h2>
-    <p>Everything Gachara needs to work is stored in its folder on your computer and is never sent to us:</p>
-    <ul>
-      <li>your box (the characters you own and their levels, gear and other details), your settings, checklists, pull numbers and summon history;</li>
-      <li>the guide data Gachara downloads, and screen captures you take with it;</li>
-      <li>if you use Gachara in Italian, the translations of guide and news texts: they are made on your PC by a translation engine that comes with the app (the one Firefox uses), and no text is sent anywhere to be translated;</li>
-      <li>the sessions of the official game websites you sign in to inside Gachara (for example Blablalink for NIKKE). You sign in directly with those sites: Gachara never sees or stores your password, and it only reads what the page shows you.</li>
-    </ul>
-    <p>Uninstalling Gachara and deleting its folder (Settings → "Open the Gachara data folder") removes all of it.</p>
+      <div class="riquadro">
+        <p><strong>In breve:</strong> Gachara funziona sul tuo dispositivo, PC o telefono. Se non scegli tu di mandare un resoconto o di accedere, niente che ti riguardi esce da lì. L'unica cosa che l'app manda da sola è un conteggio anonimo "aperta oggi", senza niente che ti identifichi, che puoi spegnere. Niente pubblicità, non vendiamo né cediamo i tuoi dati, e non leggiamo mai la memoria dei tuoi giochi né il loro traffico di rete.</p>
+      </div>
 
-    <h2>Reading the game screen</h2>
-    <p>If you turn on Screen Reader, Gachara looks at the game window you choose, every few seconds, to read your box and similar screens. The images are processed on your PC and are never stored online or sent anywhere. Gachara doesn't record other windows, doesn't read the game's memory or network traffic, and never taps or plays for you.</p>
-    <p>In the browser version (the web app on this site), your box and settings are stored in your browser, on your device; nothing is sent anywhere unless you sign in with Google. The Android app asks GitHub, where the downloads are hosted, whether a newer version exists: that request carries no data about you.</p>
-    <p>On the Android app, Screen Reader uses Android's own screen sharing: you start it, Android asks you what to share and shows that sharing is on, and you stop it whenever you want. The images are processed on your phone and are never stored or sent anywhere. The official game websites open inside the app exactly as on the PC: you sign in with the site, and Gachara only reads what the page shows you.</p>
+      <h2>Chi siamo</h2>
+      <p>Gachara è un progetto gratuito, indipendente e amatoriale di Axel394, in Italia. Per qualunque domanda sui tuoi dati, o per chiederci di vederli o cancellarli, <a href="https://github.com/Axel3614/gachadex-releases/issues">apri una segnalazione su GitHub</a>. Le segnalazioni sono pubbliche: non scriverci dati personali, dicci solo cosa ti serve e ti risponderemo su come procedere in privato.</p>
 
-    <h2>Public websites Gachara visits</h2>
-    <p>To keep guides and game data current, Gachara downloads public pages and images from guide and database sites (such as Prydwen, nikkers.cc, Loot &amp; Waifus, DokkanStats, dokkaninfo, Nikke-db, BD2DB and Banner Recommendation) and the public news of the official game websites (such as the Brown Dust 2 news) and checks GitHub for app updates. Most days the game data comes as a ready-made package from the same public GitHub repository as the app (refreshed once a day), and the sites above are visited only when that package is missing or out of date. Like any visit from a browser, those sites see your IP address; their own privacy policies apply. Gachara sends them nothing about you.</p>
+      <h2>Cosa resta sul tuo dispositivo</h2>
+      <p>Tutto quello che serve a Gachara per funzionare si salva sul tuo dispositivo e non ci arriva mai: sul PC nella cartella di Gachara, nelle app Android e iPhone nello spazio dell'app, nella web app nel tuo browser.</p>
+      <ul>
+        <li>il tuo box (i personaggi che hai, con livelli, equipaggiamento e altri dettagli), le impostazioni, le checklist, i conti delle pull e la cronologia delle evocazioni;</li>
+        <li>i dati delle guide che Gachara scarica, e le catture dello schermo che fai con lei;</li>
+        <li>se usi l'app per Windows in italiano, le traduzioni dei testi delle guide e delle notizie: le fa sul tuo PC un traduttore che viaggia con l'app (quello di Firefox), e nessun testo viene mandato da qualche parte per essere tradotto;</li>
+        <li>le sessioni dei siti ufficiali dei giochi a cui accedi dentro Gachara (per esempio Blablalink per NIKKE). L'accesso lo fai direttamente con quei siti: Gachara non vede e non salva mai la tua password, e legge solo quello che la pagina mostra a te;</li>
+        <li>sul telefono, le notifiche che Gachara prepara per i tre giorni successivi (un Solo Raid che finisce, un banner che vale, una scadenza di Dokkan): le tiene il telefono e le mostra al momento giusto, senza nessun server in mezzo.</li>
+      </ul>
+      <p>Cancellando l'app sparisce tutto: sul PC disinstalla Gachara e cancella la sua cartella (Impostazioni → "Apri la cartella dei dati di Gachara"); sul telefono disinstalla l'app; nel browser cancella i dati di questo sito.</p>
 
-    <h2>Reports you choose to send</h2>
-    <p>The Feedback section lets you share how you cleared a stage, report a problem or suggest an idea. Nothing is sent until you press "Send". What is sent:</p>
-    <ul>
-      <li>what you filled in (for example the team, items, number of attempts and your notes) and, if you add one, a screenshot;</li>
-      <li>the Gachara version and a random number created by your installation, used only to limit spam and to avoid counting the same player twice. It doesn't identify you.</li>
-      <li>for a problem report, unless you untick it, technical info to understand what went wrong: Windows version, screen size and scaling, app language, how many cards your box has, the app's own error messages of the last two days (with your Windows user name removed from file paths) and, if Screen Reader is on, its state (the window title only if you picked the window yourself) and, if you didn't add a screenshot, the picture of the game window it is reading (for Brown Dust 2 only the list of your costumes, never the character art). You can see all of it before sending.</li>
-    </ul>
-    <p>Reports are stored in our database at Supabase, our database provider. Other players can see the team, items and attempts you shared; your free text is shown only after we review it; screenshots are never shown publicly. A screenshot may contain your in-game name: crop it if you prefer.</p>
+      <h2>La lettura dello schermo del gioco</h2>
+      <p>Se accendi la Lettura schermo, Gachara guarda la finestra del gioco che scegli, ogni pochi secondi, per leggere il box e schermate simili. Le immagini si elaborano sul tuo PC e non vengono mai salvate online né mandate da nessuna parte. Gachara non registra le altre finestre, non legge la memoria del gioco né il suo traffico di rete, e non tocca e non gioca mai al posto tuo.</p>
+      <p>Nell'app Android la Lettura schermo usa la condivisione dello schermo di Android: la fai partire tu, Android ti chiede cosa condividere e ti mostra che la condivisione è accesa, e la fermi quando vuoi. Le immagini si elaborano sul telefono e non vengono mai salvate né mandate da nessuna parte.</p>
+      <p>Puoi anche scegliere una registrazione dello schermo fatta da te. Su iPhone funziona così, perché un'app non può guardare lo schermo mentre giochi, e funziona anche su Android e nella web app. Il video si legge sul tuo dispositivo, fotogramma per fotogramma, e Gachara non lo carica, non lo copia e non lo tiene mai.</p>
+      <p>I siti ufficiali dei giochi si aprono dentro le app del telefono proprio come sul PC: l'accesso lo fai con il sito, e Gachara legge solo quello che la pagina mostra a te.</p>
 
-    <h2>Anonymous usage count</h2>
-    <p>To know how many people use Gachara, the app tells our server that it was opened: once a day, the first time you open it that day. This applies to the Windows app, the Android app and the web app. What is sent:</p>
-    <ul>
-      <li>the Gachara version and whether it is the Windows app, the Android app or the web app;</li>
-      <li>three yes-or-no answers worked out on your device: whether this is your first opening of the week, of the month, and ever.</li>
-    </ul>
-    <p>Nothing else is sent: no name, no account, no installation number, nothing about your games or your device. The server only adds one to a daily total and stores no record of who was counted, nor your IP address. The dates of the last day counted stay on your device and are never sent. You can turn the count off in Settings, under "Anonymous usage count".</p>
-    <p>This website counts the same way: one visit a day per browser, and the clicks on the download and "Open Gachara" buttons, as daily totals with no identifier and no cookies. It doesn't count browsers that ask not to be tracked ("Do Not Track").</p>
+      <h2>I siti pubblici che Gachara visita</h2>
+      <p>Per tenere aggiornati guide e dati dei giochi, Gachara scarica pagine e immagini pubbliche dai siti di guide e archivi (come Prydwen, nikkers.cc, Loot &amp; Waifus, DokkanStats, dokkaninfo, Nikke-db, BD2DB e Banner Recommendation) e le notizie pubbliche dei siti ufficiali dei giochi (come quelle di Brown Dust 2). Quasi tutti i giorni i dati dei giochi arrivano già pronti dallo stesso archivio pubblico su GitHub dell'app (rinnovato una volta al giorno), e i siti qui sopra si visitano solo quando quel pacchetto manca o è vecchio. Le app del telefono fanno lo stesso dal telefono. Come per ogni visita da un browser, quei siti vedono il tuo indirizzo IP e valgono le loro informative sulla privacy. Gachara non manda loro niente su di te.</p>
 
-    <h2>Optional account: Sign in with Google</h2>
-    <p>Gachara works fully without an account. If you choose to sign in with Google, to keep your progress the same on all your devices:</p>
-    <ul>
-      <li><strong>What we receive from Google:</strong> your Google account identifier, email address, name and profile picture link (the basic "openid", "email" and "profile" permissions). We don't ask for, and can't access, your Gmail, Drive, contacts or any other Google data.</li>
-      <li><strong>What we use it for:</strong> only to recognise your account and keep your Gachara progress (box, checklists, cleared stages, pull numbers and settings) in sync between your devices. Website sessions and screen captures are never synced.</li>
-      <li><strong>Where it is stored:</strong> in our database at Supabase, which handles the sign-in for us.</li>
-      <li><strong>Deleting it:</strong> you can delete your account and all its synced data from Gachara's Settings at any time, or ask us to do it.</li>
-      <li><strong>On the Android app:</strong> your box and settings are stored in the app's own data on your phone, and the account is how they travel between your PC and your phone. After you sign in with Google in your browser, a page of this site (<code>accesso.html</code>) sends you back to the app with a one-time sign-in code in its address; the page stores nothing, and the code is useless without a secret that never leaves the app.</li>
-    </ul>
-    <p>Gachara's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. We never use this information for advertising and never sell or transfer it to others.</p>
+      <h2>Gli aggiornamenti dell'app</h2>
+      <p>Le app per Windows, Android e iPhone chiedono a GitHub, dove stanno i download, se c'è una versione nuova, e la scaricano da lì. Queste richieste non portano nessun dato su di te.</p>
+      <p>Su iPhone installi Gachara con AltStore o SideStore, che leggono l'elenco delle versioni di Gachara su questo sito (<code>altstore.json</code>) per trovare gli aggiornamenti. Firmano l'app con il tuo ID Apple: succede tra loro e Apple, e Gachara non vede mai il tuo ID Apple né la tua password.</p>
 
-    <h2>How long we keep data</h2>
-    <ul>
-      <li>Data on your PC: until you delete it.</li>
-      <li>Account data: until you delete your account.</li>
-      <li>Reports: until they are removed, by us or at your request.</li>
-      <li>Usage count: only daily totals, which can't be linked to anyone.</li>
-    </ul>
+      <h2>I resoconti che scegli di mandare</h2>
+      <p>La sezione Feedback, sul PC, sul telefono e nella web app, ti permette di raccontare come hai finito uno stage, segnalare un problema o proporre un'idea. Non parte niente finché non premi "Send". Cosa si manda:</p>
+      <ul>
+        <li>quello che hai compilato (per esempio la squadra, gli oggetti, i tentativi e le tue note) e, se la aggiungi, una schermata;</li>
+        <li>la versione di Gachara e un numero a caso creato dalla tua installazione, che serve solo a limitare lo spam e a non contare due volte lo stesso giocatore. Non ti identifica;</li>
+        <li>per la segnalazione di un problema, se non la togli, qualche informazione tecnica per capire cosa è andato storto: la versione di Windows o del sistema del telefono, misura e ridimensionamento dello schermo, lingua dell'app, quante carte ha il tuo box, i messaggi d'errore dell'app degli ultimi due giorni (togliendo dai percorsi dei file il tuo nome utente di Windows) e, se la Lettura schermo è accesa, il suo stato (il titolo della finestra solo se l'hai scelta tu) e, se non hai aggiunto una schermata, l'immagine della finestra del gioco che sta leggendo (per Brown Dust 2 solo l'elenco dei tuoi costumi, mai le immagini dei personaggi). Vedi tutto prima di mandarlo.</li>
+      </ul>
+      <p>I resoconti si salvano nella nostra base di dati su Supabase, il servizio che usiamo per questo. Gli altri giocatori vedono la squadra, gli oggetti e i tentativi che hai condiviso; il testo libero si mostra solo dopo che lo abbiamo letto; le schermate non si mostrano mai in pubblico. Una schermata può contenere il tuo nome nel gioco: se preferisci, ritagliala.</p>
 
-    <h2>Your rights</h2>
-    <p>Under the EU General Data Protection Regulation you can ask to access, correct, export or delete your data, and you can withdraw your consent at any time by deleting your account or asking us. If you think we handle your data wrongly, you can also complain to a data protection authority; in Italy that is the Garante per la protezione dei dati personali.</p>
-    <p>We process account data and reports because you choose to use those features (your consent), and update checks because the app needs them to stay up to date.</p>
+      <h2>Il conteggio anonimo dell'uso</h2>
+      <p>Per sapere quante persone usano Gachara, l'app dice al nostro server che è stata aperta: una volta al giorno, la prima volta che la apri quel giorno. Vale per l'app Windows, l'app Android, l'app iPhone e la web app. Cosa si manda:</p>
+      <ul>
+        <li>la versione di Gachara e quale delle quattro è (Windows, Android, iPhone o web app);</li>
+        <li>tre risposte sì o no calcolate sul tuo dispositivo: se è la prima apertura della settimana, del mese e in assoluto.</li>
+      </ul>
+      <p>Non si manda nient'altro: nessun nome, nessun account, nessun numero dell'installazione, niente sui tuoi giochi o sul tuo dispositivo. Il server aggiunge solo uno al totale del giorno e non tiene traccia di chi è stato contato, né del tuo indirizzo IP. Le date dell'ultimo giorno contato restano sul tuo dispositivo e non si mandano mai. Puoi spegnere il conteggio nelle Impostazioni, alla voce "Conteggio anonimo dell'uso".</p>
+      <p>Questo sito conta allo stesso modo: una visita al giorno per browser, e i clic sui pulsanti di download e "Apri Gachara", come totali del giorno senza identificativi e senza cookie. Non conta i browser che chiedono di non essere tracciati ("Do Not Track").</p>
 
-    <h2>Children</h2>
-    <p>If you are under 14, please ask a parent or guardian before signing in or sending reports.</p>
+      <h2>Account facoltativo: accesso con Google</h2>
+      <p>Gachara funziona del tutto senza account. Se scegli di accedere con Google, per avere gli stessi progressi su tutti i tuoi dispositivi:</p>
+      <ul>
+        <li><strong>Cosa riceviamo da Google:</strong> l'identificativo del tuo account Google, l'indirizzo email, il nome e il collegamento all'immagine del profilo (i permessi di base "openid", "email" e "profile"). Non chiediamo e non possiamo vedere Gmail, Drive, contatti né altri dati di Google.</li>
+        <li><strong>A cosa serve:</strong> solo a riconoscere il tuo account e a tenere allineati tra i tuoi dispositivi i progressi in Gachara (box, checklist, stage finiti, conti delle pull e impostazioni). Le sessioni dei siti, le catture e le registrazioni dello schermo non si sincronizzano mai.</li>
+        <li><strong>Dove si salva:</strong> nella nostra base di dati su Supabase, che gestisce l'accesso per noi.</li>
+        <li><strong>Come cancellarlo:</strong> puoi cancellare l'account e tutti i dati sincronizzati dalle Impostazioni di Gachara quando vuoi, o chiederci di farlo.</li>
+        <li><strong>Nelle app Android e iPhone:</strong> dopo l'accesso con Google nel browser, una pagina di questo sito (<code>accesso.html</code>) ti riporta nell'app con un codice d'accesso usa e getta nell'indirizzo; la pagina non salva niente, e il codice non serve a niente senza un segreto che non esce mai dall'app.</li>
+      </ul>
+      <p>L'uso e il trasferimento da parte di Gachara delle informazioni ricevute dalle API di Google rispettano la <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, compresi i requisiti di uso limitato (Limited Use). Non usiamo mai queste informazioni per la pubblicità e non le vendiamo né le cediamo ad altri.</p>
 
-    <h2>Changes</h2>
-    <p>If this policy changes, we'll update the date at the top of this page, and important changes will be announced in the app.</p>
+      <h2>Per quanto tempo teniamo i dati</h2>
+      <ul>
+        <li>I dati sul tuo dispositivo: finché non li cancelli.</li>
+        <li>I dati dell'account: finché non cancelli l'account.</li>
+        <li>I resoconti: finché non vengono tolti, da noi o perché ce lo chiedi.</li>
+        <li>Il conteggio dell'uso: solo totali del giorno, che non si possono collegare a nessuno.</li>
+      </ul>
+
+      <h2>I tuoi diritti</h2>
+      <p>Secondo il Regolamento generale sulla protezione dei dati (GDPR) puoi chiedere di vedere, correggere, esportare o cancellare i tuoi dati, e puoi ritirare il consenso quando vuoi cancellando l'account o chiedendocelo. Se pensi che trattiamo i tuoi dati in modo sbagliato, puoi anche rivolgerti a un'autorità per la protezione dei dati; in Italia è il Garante per la protezione dei dati personali.</p>
+      <p>Trattiamo i dati dell'account e i resoconti perché scegli tu di usare quelle funzioni (il tuo consenso), e i controlli degli aggiornamenti perché all'app servono per restare aggiornata.</p>
+
+      <h2>Minori</h2>
+      <p>Se hai meno di 14 anni, chiedi a un genitore o a chi ne fa le veci prima di accedere o di mandare resoconti.</p>
+
+      <h2>Modifiche</h2>
+      <p>Se questa informativa cambia, aggiorneremo la data in cima alla pagina, e le modifiche importanti si annunceranno nell'app.</p>
+    </div>
 
     <footer class="piede">
-      <p><a href="./">Gachara</a> · <a href="terms.html">Terms of use</a> · <a href="https://github.com/Axel3614/gachadex-releases/issues">Contact</a></p>
+      <p><a href="./">Gachara</a> · <a href="terms.html"><span lang="en">Terms of use</span><span lang="it">Termini d'uso</span></a> · <a href="https://github.com/Axel3614/gachadex-releases/issues"><span lang="en">Contact</span><span lang="it">Contatti</span></a></p>
     </footer>
   </main>
+  <script src="lingua.js" defer></script>
 </body>
 </html>

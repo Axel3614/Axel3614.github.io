@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gachara for iPhone</title>
+  <meta name="description" content="How to install Gachara on iPhone and iPad for free, with AltStore or SideStore and your own Apple ID.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../stile.css">
+  <script>
+    (function () {
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var lingua = scelta || ((navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+      document.documentElement.setAttribute("data-lingua", lingua === "it" ? "it" : "en");
+      document.documentElement.lang = lingua === "it" ? "it" : "en";
+    })();
+  </script>
+</head>
+<body>
+  <!-- La pagina dell'app per iPhone (la scheda iPhone della pagina di download porta qui; l'app ci manda quando serve
+       un'IPA nuova). L'indirizzo dell'IPA e la sua versione li scrive scripts/pubblica-sito.mjs dall'ultima versione
+       che ne ha una. docs/telefono.md, "L'app per iPhone". -->
+  <main class="pagina">
+    <header class="testata">
+      <a class="marchio" href="./"><img src="logo.svg" alt=""><span>Gacha<span class="oro">ra</span></span></a>
+      <nav class="menu">
+        <a href="./">Home</a>
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html"><span lang="en">Terms</span><span lang="it">Termini</span></a>
+        <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
+      </nav>
+    </header>
+
+    <h1><span lang="en">Gachara for iPhone and iPad</span><span lang="it">Gachara per iPhone e iPad</span></h1>
+    <p>
+      <span lang="en">iOS 15 or later. Gachara isn't on the App Store: putting it there needs a paid developer account, and Gachara is a free hobby project. You install it yourself, for free, with your own Apple ID. It takes a few minutes the first time.</span>
+      <span lang="it">iOS 15 o successivo. Gachara non è sull'App Store: per metterla lì serve un account sviluppatore a pagamento, e Gachara è un progetto gratuito e amatoriale. La installi tu, gratis, con il tuo ID Apple. La prima volta ci vogliono pochi minuti.</span>
+    </p>
+
+    <h2><span lang="en">How to install it</span><span lang="it">Come si installa</span></h2>
+    <ol>
+      <li>
+        <span lang="en"><strong>Install AltStore or SideStore</strong>, two free app stores that sign apps with your Apple ID. <a href="https://altstore.io">AltStore</a> uses a small program on your PC or Mac (AltServer); <a href="https://sidestore.io">SideStore</a> needs the PC only for the first setup. Follow the guide on their site.</span>
+        <span lang="it"><strong>Installa AltStore o SideStore</strong>, due store gratuiti che firmano le app con il tuo ID Apple. <a href="https://altstore.io">AltStore</a> usa un piccolo programma sul PC o sul Mac (AltServer); <a href="https://sidestore.io">SideStore</a> vuole il PC solo per la prima configurazione. Segui la guida sul loro sito.</span>
+      </li>
+      <li>
+        <span lang="en"><strong>Add the Gachara source.</strong> On the iPhone, with AltStore installed, tap the button below. Or open "Sources" in AltStore or SideStore, tap + and paste the address.</span>
+        <span lang="it"><strong>Aggiungi la sorgente di Gachara.</strong> Sull'iPhone, con AltStore installato, tocca il pulsante qui sotto. Oppure apri "Sources" in AltStore o SideStore, tocca + e incolla l'indirizzo.</span>
+        <p><a class="pulsante" data-conta="clic-ios" href="altstore://source?url=https://axel3614.github.io/gachara/altstore.json"><span lang="en">Add to AltStore</span><span lang="it">Aggiungi ad AltStore</span></a></p>
+        <p><code>https://axel3614.github.io/gachara/altstore.json</code></p>
+      </li>
+      <li>
+        <span lang="en"><strong>Install Gachara</strong> from the source. The first time, iOS asks you to turn on Developer Mode (Settings → Privacy &amp; Security → Developer Mode, then restart): that's how iOS treats every app you install yourself.</span>
+        <span lang="it"><strong>Installa Gachara</strong> dalla sorgente. La prima volta iOS ti chiede di accendere la Modalità sviluppatore (Impostazioni → Privacy e sicurezza → Modalità sviluppatore, poi riavvia): è così per ogni app che installi da solo.</span>
+      </li>
+    </ol>
+    <p class="tenue">
+      <span lang="en">Prefer another tool? Download <a href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.0/Gachara-0.22.0.ipa">the app file (IPA) of version 0.22.0</a> and open it with AltStore ("My Apps" → +), SideStore or <a href="https://sideloadly.io">Sideloadly</a> on your PC.</span>
+      <span lang="it">Preferisci un altro programma? Scarica <a href="https://github.com/Axel3614/gachadex-releases/releases/download/v0.22.0/Gachara-0.22.0.ipa">il file dell'app (IPA) della versione 0.22.0</a> e aprilo con AltStore ("My Apps" → +), SideStore o <a href="https://sideloadly.io">Sideloadly</a> sul PC.</span>
+    </p>
+
+    <h2><span lang="en">Every 7 days</span><span lang="it">Ogni 7 giorni</span></h2>
+    <p>
+      <span lang="en">With a free Apple ID the signature lasts 7 days and has to be refreshed. AltStore does it by itself when your PC with AltServer is on the same Wi-Fi; SideStore does it on the phone. If it expires, Gachara won't open until you refresh it, but <strong>your box and settings stay</strong>. They are lost only if you delete the app or reinstall it with another Apple ID: sign in with Google in Gachara and they come back.</span>
+      <span lang="it">Con un ID Apple gratuito la firma dura 7 giorni e va rinnovata. AltStore lo fa da solo quando il PC con AltServer è sulla stessa Wi-Fi; SideStore lo fa sul telefono. Se scade, Gachara non si apre finché non la rinnovi, ma <strong>il box e le impostazioni restano</strong>. Si perdono solo se cancelli l'app o la reinstalli con un altro ID Apple: accedi con Google in Gachara e tornano.</span>
+    </p>
+    <p class="tenue">
+      <span lang="en">A free Apple ID can keep up to 3 apps installed this way at once, AltStore or SideStore included.</span>
+      <span lang="it">Un ID Apple gratuito può tenere installate così fino a 3 app alla volta, AltStore o SideStore compresi.</span>
+    </p>
+
+    <h2><span lang="en">Updates</span><span lang="it">Aggiornamenti</span></h2>
+    <p>
+      <span lang="en">Gachara updates by itself: it downloads its new pages and restarts in a second, like the Android app. Once in a while a version needs a new app: Gachara tells you, and AltStore or SideStore shows the update in its "Updates" tab, from the source you added.</span>
+      <span lang="it">Gachara si aggiorna da sola: scarica le sue pagine nuove e si riavvia in un attimo, come l'app Android. Ogni tanto una versione vuole l'app nuova: Gachara te lo dice, e AltStore o SideStore mostrano l'aggiornamento nella scheda "Updates", dalla sorgente che hai aggiunto.</span>
+    </p>
+
+    <h2><span lang="en">What works on iPhone</span><span lang="it">Cosa funziona su iPhone</span></h2>
+    <ul>
+      <li>
+        <span lang="en">Tier lists, builds, guides, team advice, checklists and pulls, with the game data updated every day; Dokkan bosses, Extreme Z-Battles, Ultimate Clash and Frontier; notifications.</span>
+        <span lang="it">Tier list, build, guide, consigli per i team, checklist e pull, con i dati dei giochi aggiornati ogni giorno; boss, Extreme Z-Battle, Ultimate Clash e Frontier di Dokkan; le notifiche.</span>
+      </li>
+      <li>
+        <span lang="en"><strong>Your Dokkan box from a screen recording:</strong> an iPhone app can't look at the screen while you play, but you can record it. Start a recording from Control Center (if the button isn't there, add Screen Recording in Settings → Control Center), scroll your cards slowly in the game, then in Gachara open Screen Reader and pick the recording. The video is read on your phone and goes nowhere.</span>
+        <span lang="it"><strong>Il tuo box di Dokkan da una registrazione dello schermo:</strong> un'app per iPhone non può guardare lo schermo mentre giochi, ma tu puoi registrarlo. Fai partire la registrazione dal Centro di Controllo (se il pulsante non c'è, aggiungi Registrazione schermo in Impostazioni → Centro di Controllo), scorri piano le tue carte nel gioco, poi in Gachara apri Lettura schermo e scegli la registrazione. Il video si legge sul telefono e non va da nessuna parte.</span>
+      </li>
+      <li>
+        <span lang="en"><strong>Not yet:</strong> the NIKKE official site (Blablalink) inside the app, and reading Chaos Zero Nightmare and Brown Dust 2 from the screen. For those, sign in with Google to bring your box from Gachara for Windows or Android, or mark it by hand.</span>
+        <span lang="it"><strong>Non ancora:</strong> il sito ufficiale di NIKKE (Blablalink) dentro l'app, e la lettura di Chaos Zero Nightmare e Brown Dust 2 dallo schermo. Per quelli accedi con Google per portare il box da Gachara per Windows o Android, o segnalo a mano.</span>
+      </li>
+    </ul>
+    <p class="tenue">
+      <span lang="en">Rather not install anything? <a data-conta="clic-web" href="app/">Gachara in the browser</a> works on any iPhone: add it to your Home Screen.</span>
+      <span lang="it">Preferisci non installare niente? <a data-conta="clic-web" href="app/">Gachara nel browser</a> funziona su qualunque iPhone: aggiungila alla schermata Home.</span>
+    </p>
+
+    <footer class="piede">
+      <p><a href="download.html"><span lang="en">All downloads</span><span lang="it">Tutti i download</span></a> · <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="it">Privacy</span></a> · <a href="terms.html"><span lang="en">Terms of use</span><span lang="it">Termini d'uso</span></a> · <a href="https://github.com/Axel3614/gachadex-releases/issues"><span lang="en">Contact</span><span lang="it">Contatti</span></a></p>
+    </footer>
+  </main>
+  <script src="lingua.js" defer></script>
+  <script src="conta.js" defer></script>
+</body>
+</html>

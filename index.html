@@ -7,19 +7,37 @@
   <meta name="description" content="Free tools for gacha games by Axel394.">
   <link rel="icon" href="gachara/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="stile.css">
+  <script>
+    (function () {
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var lingua = scelta || ((navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+      document.documentElement.setAttribute("data-lingua", lingua === "it" ? "it" : "en");
+      document.documentElement.lang = lingua === "it" ? "it" : "en";
+    })();
+  </script>
 </head>
 <body>
   <main class="pagina">
-    <h1>Axel394</h1>
-    <p class="tenue">Free tools for gacha games, made as a hobby.</p>
+    <header class="testata">
+      <h1>Axel394</h1>
+      <nav class="menu">
+        <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
+      </nav>
+    </header>
+    <p class="tenue"><span lang="en">Free tools for gacha games, made as a hobby.</span><span lang="it">Strumenti gratuiti per i giochi gacha, fatti per hobby.</span></p>
     <div class="riquadro">
       <a class="marchio" href="gachara/">
         <img src="gachara/logo.svg" alt="">
         <span>Gacha<span class="oro">ra</span></span>
       </a>
-      <p>A Windows companion app for gacha games: one tier list built from the best guide sites, your own box kept up to date, and advice on who to use and who to upgrade.</p>
-      <a href="gachara/">Learn more about Gachara</a>
+      <p>
+        <span lang="en">A companion app for gacha games, on Windows, Android and iPhone: one tier list built from the best guide sites, your own box kept up to date, and advice on who to use and who to upgrade.</span>
+        <span lang="it">Un'app di supporto ai giochi gacha, su Windows, Android e iPhone: una tier list unica costruita dai migliori siti di guide, il tuo box sempre aggiornato e consigli su chi usare e chi potenziare.</span>
+      </p>
+      <a href="gachara/"><span lang="en">Learn more about Gachara</span><span lang="it">Scopri Gachara</span></a>
     </div>
   </main>
+  <script src="gachara/lingua.js" defer></script>
 </body>
 </html>
