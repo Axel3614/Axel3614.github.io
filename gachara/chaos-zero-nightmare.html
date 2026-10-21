@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chaos Zero Nightmare tier list, builds, decks and save data – Gachara</title>
   <meta name="description" content="Free Chaos Zero Nightmare companion: reads your combatants, Ego, Potential, decks and Save Data from the screen, compares them with the best builds and Deck Codes, and tells you what to change.">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="canonical" href="https://axel3614.github.io/gachara/chaos-zero-nightmare.html">
   <meta property="og:title" content="Chaos Zero Nightmare tier list, builds, decks and save data – Gachara">
   <meta property="og:description" content="Free Chaos Zero Nightmare companion: reads your combatants, Ego, Potential, decks and Save Data from the screen, compares them with the best builds and Deck Codes, and tells you what to change.">
   <meta property="og:image" content="https://axel3614.github.io/gachara/img/build.webp">
   <meta property="og:type" content="website">
   <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preload" href="../fonti/unbounded-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonti/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../stile.css">
   <!-- Generata da scripts/pagine-giochi-sito.mjs: si cambia lì. -->
   <script>
@@ -23,57 +26,90 @@
     })();
   </script>
 </head>
-<body>
+<body data-gioco="czn">
   <main class="pagina larga">
     <header class="testata">
       <a class="marchio" href="./"><img src="logo.svg" alt=""><span>Gacha<span class="oro">ra</span></span></a>
       <nav class="menu">
         <a href="./">Home</a>
-        <a href="download.html">Download</a>
         <a data-conta="clic-web" href="app/"><span lang="en">Open in browser</span><span lang="it">Apri nel browser</span></a>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html"><span lang="en">Terms</span><span lang="it">Termini</span></a>
+        <a class="evidenza" href="download.html">Download</a>
         <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
       </nav>
     </header>
 
     <section class="apertura">
       <div>
-        <p class="tenue">Chaos Zero Nightmare</p>
+        <p class="occhiello">Chaos Zero Nightmare</p>
         <h1><span lang="en">Your combatants and decks compared with the best builds</span><span lang="it">I tuoi combattenti e i tuoi mazzi confrontati con le build migliori</span></h1>
         <p class="grande"><span lang="en">Open your Combatant List, Save Data and Memory Fragments and Gachara reads them from the screen, on PC or on your phone. Then it shows, for every combatant, what to change compared with the recommended build.</span><span lang="it">Apri la Combatant List, i Save Data e i Memory Fragments e Gachara li legge dallo schermo, sul PC o sul telefono. Poi ti mostra, per ogni combattente, cosa cambiare rispetto alla build consigliata.</span></p>
-        <p>
-          <a class="pulsante" href="download.html"><span lang="en">Download for Windows, Android or iPhone</span><span lang="it">Scarica per Windows, Android o iPhone</span></a>
+        <div class="azioni">
+          <a class="pulsante" href="download.html"><span lang="en">Download Gachara</span><span lang="it">Scarica Gachara</span></a>
           <a class="pulsante secondario" data-conta="clic-web" href="app/"><span lang="en">Use it in your browser</span><span lang="it">Usala nel browser</span></a>
-        </p>
-        <p class="tenue"><span lang="en">Free, no ads, no account needed.</span><span lang="it">Gratis, senza pubblicità, senza account obbligatorio.</span></p>
+        </div>
+        <p class="tenue"><span lang="en">Free, no ads, no account needed. For Windows, Android, iPhone and the browser.</span><span lang="it">Gratis, senza pubblicità, senza account obbligatorio. Per Windows, Android, iPhone e browser.</span></p>
       </div>
-      <img class="foto" src="img/build.webp" width="1281" height="802" alt="Chaos Zero Nightmare builds in Gachara">
+      <div class="cornice">
+        <img class="foto" src="img/build.webp" width="1281" height="802" alt="Chaos Zero Nightmare builds in Gachara">
+      </div>
     </section>
 
     <h2><span lang="en">What Gachara does for Chaos Zero Nightmare</span><span lang="it">Cosa fa Gachara per Chaos Zero Nightmare</span></h2>
-    <div class="griglia">
+    <div class="griglia numerata">
       <section class="scheda">
         <h3><span lang="en">Builds and Deck Codes</span><span lang="it">Build e Deck Code</span></h3>
-        <p><span lang="en">Recommended builds, cards with their epiphanies, and team decks with the Deck Code to paste into the game.</span><span lang="it">Build consigliate, carte con le loro epifanie e mazzi di squadra con il Deck Code da incollare nel gioco.</span></p>
+        <p class="tenue"><span lang="en">Recommended builds, cards with their epiphanies, and team decks with the Deck Code to paste into the game.</span><span lang="it">Build consigliate, carte con le loro epifanie e mazzi di squadra con il Deck Code da incollare nel gioco.</span></p>
       </section>
       <section class="scheda">
         <h3><span lang="en">Save Data and Faint Memory</span><span lang="it">Save Data e Faint Memory</span></h3>
-        <p><span lang="en">Your saves read from the game, the Faint Memory points and the tier cap, and what still fits in a run.</span><span lang="it">I tuoi salvataggi letti dal gioco, i punti Faint Memory e il tetto del tier, e cosa ci sta ancora in una run.</span></p>
+        <p class="tenue"><span lang="en">Your saves read from the game, the Faint Memory points and the tier cap, and what still fits in a run.</span><span lang="it">I tuoi salvataggi letti dal gioco, i punti Faint Memory e il tetto del tier, e cosa ci sta ancora in una run.</span></p>
       </section>
       <section class="scheda">
         <h3><span lang="en">Great Rift</span><span lang="it">Great Rift</span></h3>
-        <p><span lang="en">Each season's rules and bonuses, and the teams players use, checked against your box.</span><span lang="it">Le regole e i bonus di ogni stagione, e i team usati dai giocatori, confrontati con il tuo box.</span></p>
+        <p class="tenue"><span lang="en">Each season's rules and bonuses, and the teams players use, checked against your box.</span><span lang="it">Le regole e i bonus di ogni stagione, e i team usati dai giocatori, confrontati con il tuo box.</span></p>
       </section>
       <section class="scheda">
         <h3><span lang="en">Tier list and upgrades</span><span lang="it">Tier list e potenziamenti</span></h3>
-        <p><span lang="en">One tier list, partners, Memory Fragments and Potential to fix first, pity from the Rescue screen, and the daily checklist.</span><span lang="it">Una tier list sola, partner, Memory Fragments e Potential da sistemare per primi, la pity dalla schermata Rescue e la checklist del giorno.</span></p>
+        <p class="tenue"><span lang="en">One tier list, partners, Memory Fragments and Potential to fix first, pity from the Rescue screen, and the daily checklist.</span><span lang="it">Una tier list sola, partner, Memory Fragments e Potential da sistemare per primi, la pity dalla schermata Rescue e la checklist del giorno.</span></p>
       </section>
     </div>
 
     <h2><span lang="en">Safe for your account</span><span lang="it">Sicura per il tuo account</span></h2>
-    <p><span lang="en">Gachara only looks at what the game shows on screen, or at the game's official site the way you would by scrolling it. It never reads the game's memory or its network traffic, and it never plays for you.</span><span lang="it">Gachara guarda solo quello che il gioco mostra sullo schermo, o il sito ufficiale del gioco come faresti tu scorrendolo. Non legge mai la memoria del gioco né il suo traffico di rete, e non gioca mai al posto tuo.</span></p>
-    <p><span lang="en">Also for <a href="dokkan.html">Dokkan Battle</a>, <a href="nikke.html">NIKKE</a>, <a href="chaos-zero-nightmare.html">Chaos Zero Nightmare</a> and <a href="brown-dust-2.html">Brown Dust 2</a>. <a href="./">More about Gachara</a>.</span><span lang="it">Anche per <a href="dokkan.html">Dokkan Battle</a>, <a href="nikke.html">NIKKE</a>, <a href="chaos-zero-nightmare.html">Chaos Zero Nightmare</a> e <a href="brown-dust-2.html">Brown Dust 2</a>. <a href="./">Di più su Gachara</a>.</span></p>
+    <ul class="spunte">
+      <li><span lang="en">Gachara only looks at what the game shows on screen, or at the game's official site the way you would by scrolling it.</span><span lang="it">Gachara guarda solo quello che il gioco mostra sullo schermo, o il sito ufficiale del gioco come faresti tu scorrendolo.</span></li>
+      <li><span lang="en">It never reads the game's memory or its network traffic, and it never plays for you.</span><span lang="it">Non legge mai la memoria del gioco né il suo traffico di rete, e non gioca mai al posto tuo.</span></li>
+    </ul>
+
+    <section class="invito">
+      <h2><span lang="en">Try it with your Chaos Zero Nightmare box</span><span lang="it">Provala con il tuo box di Chaos Zero Nightmare</span></h2>
+      <p class="tenue"><span lang="en">Install it on Windows, Android or iPhone, or open it in your browser right now. It's free.</span><span lang="it">Installala su Windows, Android o iPhone, o aprila subito nel browser. È gratis.</span></p>
+      <div class="azioni">
+        <a class="pulsante" href="download.html"><span lang="en">Download Gachara</span><span lang="it">Scarica Gachara</span></a>
+        <a class="pulsante secondario" data-conta="clic-web" href="app/"><span lang="en">Open in browser</span><span lang="it">Apri nel browser</span></a>
+      </div>
+    </section>
+
+    <h2><span lang="en">Also for</span><span lang="it">Anche per</span></h2>
+    <div class="giochi">
+      <a class="gioco" data-gioco="dokkan" href="dokkan.html">
+        <strong>Dokkan Battle</strong>
+        <span><span lang="en">Your box from the screen, and the best team you own for every hard stage.</span><span lang="it">Il box dallo schermo, e il team migliore che hai per ogni stage difficile.</span></span>
+        <em><span lang="en">See what it does</span><span lang="it">Guarda cosa fa</span></em>
+      </a>
+      <a class="gioco" data-gioco="nikke" href="nikke.html">
+        <strong>NIKKE</strong>
+        <span><span lang="en">Your Nikkes synced from Blablalink, Solo Raid and Union Raid teams, upgrades.</span><span lang="it">Le tue Nikke da Blablalink, team per Solo Raid e Union Raid, potenziamenti.</span></span>
+        <em><span lang="en">See what it does</span><span lang="it">Guarda cosa fa</span></em>
+      </a>
+      <a class="gioco" data-gioco="bd2" href="brown-dust-2.html">
+        <strong>Brown Dust 2</strong>
+        <span><span lang="en">Boss strategies turn by turn, Fiend Hunter, and teams for the costumes you own.</span><span lang="it">Strategie dei boss turno per turno, Fiend Hunter, e team per i costumi che hai.</span></span>
+        <em><span lang="en">See what it does</span><span lang="it">Guarda cosa fa</span></em>
+      </a>
+    </div>
+    <p class="tenue"><a href="./"><span lang="en">More about Gachara</span><span lang="it">Di più su Gachara</span></a></p>
 
     <footer class="piede">
       <p><span lang="en">Gachara is an independent hobby project by Axel394. It isn't affiliated with or endorsed by the developers or publishers of Chaos Zero Nightmare; game names and images belong to their owners.</span><span lang="it">Gachara è un progetto indipendente e amatoriale di Axel394. Non è affiliata né approvata dagli sviluppatori o dagli editori di Chaos Zero Nightmare; nomi e immagini dei giochi sono dei loro proprietari.</span></p>
