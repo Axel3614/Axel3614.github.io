@@ -4,3 +4,4 @@ Allow: /
 Disallow: /gachara/accesso.html
 
 Sitemap: https://axel3614.github.io/sitemap.xml
+Sitemap: https://axel3614.github.io/gachara/sitemap.xml
