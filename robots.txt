@@ -1,0 +1,6 @@
+# Tutti i motori di ricerca possono leggere il sito.
+User-agent: *
+Allow: /
+Disallow: /gachara/accesso.html
+
+Sitemap: https://axel3614.github.io/sitemap.xml
