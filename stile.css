@@ -70,6 +70,14 @@
   --chiaro: #e7b987;
 }
 
+/* Zenless Zone Zero (2026-10-23): arancione acceso, come nell'app. */
+[data-gioco="zzz"] {
+  --accento: #ff6b1a;
+  --accento-due: #ff9a5c;
+  --sopra-accento: #1f0b00;
+  --chiaro: #ffb07f;
+}
+
 * {
   box-sizing: border-box;
 }
