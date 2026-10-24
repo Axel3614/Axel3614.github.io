@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credits · Gachara</title>
+  <meta name="description" content="The people and projects whose work Gachara uses, with links to them.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../stile.css">
+  <script>
+    (function () {
+      var scelta = null;
+      try { scelta = localStorage.getItem("gachara:lingua-sito"); } catch (e) {}
+      var lingua = scelta || ((navigator.language || "").toLowerCase().indexOf("it") === 0 ? "it" : "en");
+      document.documentElement.setAttribute("data-lingua", lingua === "it" ? "it" : "en");
+      document.documentElement.lang = lingua === "it" ? "it" : "en";
+    })();
+  </script>
+</head>
+<body>
+  <!-- Generata da scripts/pagina-crediti-sito.mjs da src/dati/crediti.ts: non cambiarla a mano. -->
+  <main class="pagina">
+    <header class="testata">
+      <a class="marchio" href="./"><img src="logo.svg" alt=""><span>Gacha<span class="oro">ra</span></span></a>
+      <nav class="menu">
+        <a href="./">Home</a>
+        <a class="evidenza" href="download.html">Download</a>
+        <a href="credits.html" aria-current="page"><span lang="en">Credits</span><span lang="it">Crediti</span></a>
+        <button type="button" class="lingua" id="lingua" aria-label="Language / Lingua">IT</button>
+      </nav>
+    </header>
+    <h1><span lang="en">Credits and sources</span><span lang="it">Crediti e fonti</span></h1>
+    <div class="riquadro">
+      <p><span lang="en">Gachara is built on the work of many people in the game communities. Thank you! Here is who made what, with a link to their project: if you like it, go and visit them. The same list is in the app, in Settings → Credits.</span><span lang="it">Gachara è fatta anche con il lavoro di tante persone delle community dei giochi. Grazie! Ecco chi ha fatto cosa, con il collegamento al suo progetto: se ti piace, vai a trovarli. Lo stesso elenco è nell'app, in Impostazioni → Crediti.</span></p>
+      <h2><span lang="en">NIKKE</span><span lang="it">NIKKE</span></h2>
+      <ul>
+        <li><a href="https://nikkers.cc/">nikkers.cc</a><br><span lang="en">Nikke list, season bosses and the team compositions players use, from its public API.</span><span lang="it">Elenco delle Nikke, boss della stagione e squadre usate dai giocatori, dalla sua API pubblica.</span></li>
+        <li><a href="https://www.prydwen.gg/">Prydwen.gg</a><br><span lang="en">Tier lists, builds, character data, game mode guides and character images for NIKKE, Chaos Zero Nightmare and Zenless Zone Zero.</span><span lang="it">Tier list, build, dati dei personaggi, guide delle modalità e immagini dei personaggi di NIKKE, Chaos Zero Nightmare e Zenless Zone Zero.</span></li>
+        <li><a href="https://lootandwaifus.com/nikke-goddess-of-victory-tier-list/">Loot &amp; Waifus</a><br><span lang="en">The NIKKE PvE tier list, one of the sources of the combined rating.</span><span lang="it">La tier list PvE di NIKKE, una delle fonti del voto unico.</span></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1zE11XTPotgn9XhhhvxCvUu-ZeaWlGUQgwG8wg1Gtf0g/edit">Solo Raid sheet</a> <span lang="en">by skyJLV</span><span lang="it">di skyJLV</span><br><span lang="en">Solo Raid teams and damage, from the public spreadsheet.</span><span lang="it">Squadre e danni del Solo Raid, dal foglio pubblico.</span></li>
+        <li><a href="https://nikke.gg/">nikke.gg</a><br><span lang="en">Tier list and Interception guides, only when you import them yourself from the window inside the app.</span><span lang="it">Tier list e guide delle Interception, solo quando le importi tu dalla finestra dentro l'app.</span></li>
+        <li><a href="https://nikke-db.github.io/">Nikke-db</a><br><span lang="en">The square character icons.</span><span lang="it">Le icone quadrate dei personaggi.</span></li>
+      </ul>
+      <h2><span lang="en">Dragon Ball Z Dokkan Battle</span><span lang="it">Dragon Ball Z Dokkan Battle</span></h2>
+      <ul>
+        <li><a href="https://dokkaninfo.com/">dokkaninfo.com</a><br><span lang="en">Cards, events, missions and card images.</span><span lang="it">Carte, eventi, missioni e immagini delle carte.</span></li>
+        <li><a href="https://dokkanstats.com/">DokkanStats</a><br><span lang="en">The community tier list, card details (passives, super attacks), event stages and bosses, card images, and its DEF calculator, used to check Gachara's numbers.</span><span lang="it">La tier list della community, i dettagli delle carte (passive, super attacchi), stage e boss degli eventi, immagini delle carte, e il suo DEF Calculator, usato per controllare i numeri di Gachara.</span></li>
+        <li><a href="https://github.com/kandymanis/dokkanalytics">Razzer's Calcing Guide (dokkanalytics)</a> <span lang="en">by Razzer, kandymanis</span><span lang="it">di Razzer, kandymanis</span><br><span lang="en">The rules for how defense and damage are calculated in battle.</span><span lang="it">Le regole di come si calcolano difesa e danni in battaglia.</span><br><span class="tenue">License / Licenza: MIT</span></li>
+        <li><a href="https://github.com/DokkanEntropy/Wiki">Dokkan Entropy Wiki</a> <span lang="en">by Dokkan Entropy</span><span lang="it">di Dokkan Entropy</span><br><span lang="en">The tables of the game's internal codes for passives and conditions.</span><span lang="it">Le tabelle dei codici interni del gioco per passive e condizioni.</span></li>
+      </ul>
+      <h2><span lang="en">Brown Dust 2</span><span lang="it">Brown Dust 2</span></h2>
+      <ul>
+        <li><a href="https://browndust2-db.souseha.com/">BD2DB</a> <span lang="en">by souseha</span><span lang="it">di souseha</span><br><span lang="en">Costumes, skills, effect labels, costume images, banner and shop history, and the Formation Simulator plans other players shared, from the site and its public API.</span><span lang="it">Costumi, abilità, etichette degli effetti, immagini dei costumi, storico di banner e negozi, e i piani del Formation Simulator condivisi dagli altri giocatori, dal sito e dalla sua API pubblica.</span></li>
+        <li><a href="https://botan14xd.github.io/BD2-Overview/">BD2 Tactical Compendium</a> <span lang="en">by Botan (BotAn14XD)</span><span lang="it">di Botan (BotAn14XD)</span><br><span lang="en">The costume summaries (roles, damage type, effects, chains, action order) and the rules of its Team Evaluator, used to build and check teams; the Fiend Hunter bosses and their clear rewards.</span><span lang="it">I riassunti dei costumi (ruoli, tipo di danno, effetti, catene, ordine d'azione) e le regole del suo Team Evaluator, usati per fare e controllare le squadre; i boss del Fiend Hunter e i loro premi.</span></li>
+        <li><a href="https://zormolo.github.io/BD2-Banner-Recommendation/">BD2 Banner Recommendation</a> <span lang="en">by Zormolo, Botan</span><span lang="it">di Zormolo, Botan</span><br><span lang="en">Whether a costume is worth pulling and which upgrade level is worth reaching, shown in Today, Banners and Upgrades.</span><span lang="it">Se un costume conviene e a che livello conviene potenziarlo, in Oggi, Banner e Upgrades.</span></li>
+        <li><a href="https://dotgg.gg/brown-dust-2/">dotgg.gg</a><br><span lang="en">Guides, only when you import them yourself from the window inside the app.</span><span lang="it">Guide, solo quando le importi tu dalla finestra dentro l'app.</span></li>
+      </ul>
+      <h2><span lang="en">Chaos Zero Nightmare</span><span lang="it">Chaos Zero Nightmare</span></h2>
+      <ul>
+        <li><a href="https://github.com/Fish0418/CZN_Calculator">CZN Calculator</a> <span lang="en">by Fish0418</span><span lang="it">di Fish0418</span><br><span lang="en">The level and ascension tables (experience, Units and materials).</span><span lang="it">Le tabelle di livelli e ascensioni (esperienza, Unit e materiali).</span></li>
+        <li><a href="https://github.com/DEX-1101/CZN-Save-Data-Tracker">CZN Save Data Tracker</a> <span lang="en">by DEX-1101</span><span lang="it">di DEX-1101</span><br><span lang="en">The Faint Memory rules for Save Data after the February 2026 update.</span><span lang="it">Le regole dei punti Faint Memory dei Save Data dopo l'aggiornamento di febbraio 2026.</span></li>
+        <li><a href="https://github.com/jbchhproj/czn-save-data-calculator">czn-save-data-calculator</a> <span lang="en">by jbchhproj</span><span lang="it">di jbchhproj</span><br><span lang="en">The same Faint Memory rules, with the Persona cards of season 3.</span><span lang="it">Le stesse regole dei Faint Memory, con le carte Persona della stagione 3.</span></li>
+      </ul>
+      <h2><span lang="en">Zenless Zone Zero</span><span lang="it">Zenless Zone Zero</span></h2>
+      <ul>
+        <li><a href="https://github.com/LvlUrArti/ShiyuStats">ShiyuStats</a> <span lang="en">by LvlUrArti</span><span lang="it">di LvlUrArti</span><br><span lang="en">Which teams players really use in Shiyu Defense and Deadly Assault (its public dataset).</span><span lang="it">Quali squadre usano davvero i giocatori in Shiyu Defense e Deadly Assault (il suo dataset pubblico).</span><br><span class="tenue">License / Licenza: MIT</span></li>
+      </ul>
+      <h2><span lang="en">Redeem codes</span><span lang="it">Codici da riscattare</span></h2>
+      <ul>
+        <li><a href="https://www.pocketgamer.com/">Pocket Gamer</a><br><span lang="en">Lists of redeem codes, cross-checked with the others.</span><span lang="it">Elenchi dei codici, incrociati con gli altri.</span></li>
+        <li><a href="https://allthings.how/">allthings.how</a><br><span lang="en">Lists of redeem codes, cross-checked with the others.</span><span lang="it">Elenchi dei codici, incrociati con gli altri.</span></li>
+        <li><a href="https://www.destructoid.com/">Destructoid</a><br><span lang="en">Lists of redeem codes, cross-checked with the others.</span><span lang="it">Elenchi dei codici, incrociati con gli altri.</span></li>
+        <li><a href="https://www.supercheats.com/">SuperCheats</a><br><span lang="en">Lists of redeem codes, cross-checked with the others.</span><span lang="it">Elenchi dei codici, incrociati con gli altri.</span></li>
+      </ul>
+      <h2><span lang="en">Software and fonts inside the app</span><span lang="it">Programmi e caratteri dentro l'app</span></h2>
+      <ul>
+        <li><a href="https://github.com/Genymobile/scrcpy">scrcpy</a> <span lang="en">by Genymobile, Romain Vimont</span><span lang="it">di Genymobile, Romain Vimont</span><br><span lang="en">Shows and records an Android phone on the PC (included in the Windows app, with its license).</span><span lang="it">Mostra e registra un telefono Android sul PC (incluso nell'app per Windows, con la sua licenza).</span><br><span class="tenue">License / Licenza: Apache-2.0</span></li>
+        <li><a href="https://github.com/mozilla/translations">Bergamot Translator, Firefox Translations</a> <span lang="en">by Mozilla, the Bergamot project</span><span lang="it">di Mozilla, the Bergamot project</span><br><span lang="en">The English → Italian translator that runs on your device.</span><span lang="it">Il traduttore inglese → italiano che gira sul tuo dispositivo.</span><br><span class="tenue">License / Licenza: MPL-2.0</span></li>
+        <li><a href="https://github.com/gree/lwf">LWF</a> <span lang="en">by GREE, Inc. (with Tween.js, Robert Penner and others)</span><span lang="it">di GREE, Inc. (with Tween.js, Robert Penner and others)</span><br><span lang="en">Plays the animated Dokkan card artworks.</span><span lang="it">Anima gli artwork delle carte di Dokkan.</span><br><span class="tenue">License / Licenza: Zlib</span></li>
+        <li><a href="https://github.com/googlefonts/unbounded">Geist, Unbounded</a> <span lang="en">by The Geist Project Authors (Vercel), The Unbounded Project Authors</span><span lang="it">di The Geist Project Authors (Vercel), The Unbounded Project Authors</span><br><span lang="en">The fonts of the app.</span><span lang="it">I caratteri dell'app.</span><br><span class="tenue">License / Licenza: OFL-1.1</span></li>
+        <li><a href="https://www.electronjs.org/">Electron, React, Capacitor</a> <span lang="en">by OpenJS Foundation, Meta, Ionic and their contributors</span><span lang="it">di OpenJS Foundation, Meta, Ionic and their contributors</span><br><span lang="en">The foundations of the app, with the other open-source libraries listed in the licenses below.</span><span lang="it">Le fondamenta dell'app, con le altre librerie open source elencate nelle licenze qui sotto.</span><br><span class="tenue">License / Licenza: MIT</span></li>
+      </ul>
+      <h2><span lang="en">Games not shown yet (Honkai: Star Rail, Arknights: Endfield)</span><span lang="it">Giochi non ancora mostrati (Honkai: Star Rail, Arknights: Endfield)</span></h2>
+      <ul>
+        <li><a href="https://github.com/Mar-7th/StarRailRes">StarRailRes</a> <span lang="en">by Mar-7th</span><span lang="it">di Mar-7th</span><br><span lang="en">Honkai: Star Rail character data and icons.</span><span lang="it">Dati e icone dei personaggi di Honkai: Star Rail.</span><br><span class="tenue">License / Licenza: AGPL-3.0</span></li>
+        <li><a href="https://enka.network/">Enka.Network</a><br><span lang="en">Reading a Honkai: Star Rail profile showcase from its UID.</span><span lang="it">La lettura della vetrina di un profilo di Honkai: Star Rail dal suo UID.</span></li>
+      </ul>
+      <p class="tenue"><span lang="en">Gachara is an unofficial, free, fan-made app. It is not affiliated with or endorsed by SHIFT UP, Level Infinite, Bandai Namco, NEOWIZ, Smilegate, HoYoverse or any other game company. Game names, images and data belong to their owners.</span><span lang="it">Gachara è un'app non ufficiale, gratuita, fatta da un fan. Non è collegata né approvata da SHIFT UP, Level Infinite, Bandai Namco, NEOWIZ, Smilegate, HoYoverse o altre case dei giochi. Nomi, immagini e dati dei giochi appartengono ai loro proprietari.</span></p>
+      <p class="tenue"><span lang="en">Are you the author of one of these and want something changed, or your work removed? Write to us: it will be done.</span><span lang="it">Sei l'autore di uno di questi e vuoi che cambi qualcosa, o che il tuo lavoro venga tolto? Scrivici: lo facciamo.</span> <a href="https://github.com/Axel3614/gachadex-releases/issues"><span lang="en">Contact</span><span lang="it">Contatti</span></a></p>
+    </div>
+    <footer class="piede">
+      <p><a href="./">Gachara</a> · <a href="privacy.html"><span lang="en">Privacy policy</span><span lang="it">Privacy</span></a> · <a href="terms.html"><span lang="en">Terms of use</span><span lang="it">Termini d'uso</span></a> · <a href="https://github.com/Axel3614/gachadex-releases/issues"><span lang="en">Contact</span><span lang="it">Contatti</span></a></p>
+    </footer>
+  </main>
+  <script src="lingua.js" defer></script>
+</body>
+</html>
