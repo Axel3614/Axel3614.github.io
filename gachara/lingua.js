@@ -21,3 +21,12 @@
     scrivi();
   });
 })();
+
+// Un link a una domanda (#feedback) la apre: le domande sono chiuse finché
+// non le si tocca.
+function apriDomanda() {
+  const domanda = location.hash.length > 1 ? document.getElementById(location.hash.slice(1)) : null;
+  if (domanda && domanda.tagName === "DETAILS") domanda.open = true;
+}
+addEventListener("hashchange", apriDomanda);
+addEventListener("DOMContentLoaded", apriDomanda);
