@@ -5,7 +5,7 @@
 // prima visita della settimana, del mese, in assoluto). Non conta per chi ha
 // acceso "Do Not Track" e nelle prove sul PC. Come nell'app: src/dati/uso.ts.
 (function () {
-  var INDIRIZZO = "https://jhhsibxutsexfeyyoscd.supabase.co/functions/v1/Gachadex";
+  var INDIRIZZO = "https://hjzdrsibyokgqthusppv.supabase.co/functions/v1/Gachadex";
   if (location.protocol !== "https:" || navigator.doNotTrack === "1") return;
   var due = function (n) { return (n < 10 ? "0" : "") + n; };
   var manda = function (corpo, poi) {
