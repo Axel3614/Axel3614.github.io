@@ -78,6 +78,14 @@
   --chiaro: #ffb07f;
 }
 
+/* Arknights: Endfield (2026-10-27): il lime, come nell'app. */
+[data-gioco="endfield"] {
+  --accento: #a6d80f;
+  --accento-due: #c6ef4c;
+  --sopra-accento: #142000;
+  --chiaro: #d6f582;
+}
+
 * {
   box-sizing: border-box;
 }

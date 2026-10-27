@@ -35,7 +35,7 @@
 
     <div lang="en">
       <h1>Privacy policy</h1>
-      <p class="tenue">Last updated: 15 October 2026</p>
+      <p class="tenue">Last updated: 27 October 2026</p>
 
       <div class="riquadro">
         <p><strong>In short:</strong> Gachara works on your device, PC or phone. Unless you choose to send a report or sign in, nothing about you leaves it. The only thing the app sends by itself is an anonymous "opened today" count, with nothing that identifies you, which you can turn off. We don't show ads, we don't sell or share your data, and we never read your games' memory or network traffic.</p>
@@ -52,6 +52,7 @@
         <li>if you use the app in Italian, the translations of guide and news texts: they are made on your device by a translation engine (the one Firefox uses), and no text is sent anywhere to be translated. On Windows it comes with the app; on the phone you download it once from Settings, from the same public sources the app is built with (the npm package registry for the engine, Mozilla's model archive for the English → Italian model): those downloads send nothing about you;</li>
         <li>the sessions of the official game websites you sign in to inside Gachara (for example Blablalink for NIKKE, HoYoLAB for Zenless Zone Zero). You sign in directly with those sites: Gachara never sees or stores your password, and it only reads what the page shows you;</li>
 <li>Zenless Zone Zero pull history (PC only): when you open the Signal Search history in the game, the game saves that page's address, with a temporary key, in its own cache on your PC. Gachara reads it from there and asks the game's own site (HoYoverse) for the same pages the game shows. The key is never saved and is sent only to HoYoverse; the pulls are kept on your PC;</li>
+<li>Arknights: Endfield pull history (PC only): in the same way, when you open the pull history in the game, the launcher keeps a temporary read-only pass for that page in its cache on your PC. Gachara reads it from there and asks the game's own site (Gryphline) for the same pages, at most once a day by itself or when you press Read now. The pass is never saved and is sent only to Gryphline; the pulls are kept on your PC;</li>
         <li>on the phone, the notifications Gachara prepares for the next three days (a Solo Raid that ends, a banner worth pulling, a Dokkan deadline): your phone keeps them and shows them at the right time, with no server in between;</li>
         <li>the backups you make in Settings: a file saved where you choose (on the PC a folder, on the phone wherever you send it from the share menu). It never comes to us.</li>
       </ul>
@@ -80,6 +81,11 @@
       </ul>
       <p>Reports are stored in our database at Supabase, our database provider. Other players can see the team, items and attempts you shared; your free text is shown only after we review it; screenshots are never shown publicly. A screenshot may contain your in-game name: crop it if you prefer.</p>
       <p>Every report becomes a ticket: in "Your tickets" you see its status and our replies, and you can answer. Your tickets and the messages are read with your installation's random number, so only your installation sees them; your nickname is never shown to other players. We delete tickets when they are no longer needed, and you can ask us to delete yours at any time.</p>
+      <p>If you have sent at least one report, when you open the app it asks our server whether there are new replies to your tickets, using that same random number, so it can tell you.</p>
+
+      <h2>Messages from Gachara: news, polls and ratings</h2>
+      <p>When you open the app it asks our server for our current messages (news, a poll, a rating, an invitation to share or to help test). This request carries only which of the four apps you use (Windows, Android, iPhone or web app), so we can show the right messages; nothing about you. Which messages you have already seen stays on your device.</p>
+      <p>Only if you choose an answer, we receive: the answer (your choice in a poll, or the stars and the optional comment of a rating), which of the four apps you use and your installation's random number, used only to keep one answer per installation. We look at answers only as totals and comments, and delete them when the message is over. Joining a test sends a normal report (see above), so we can reply to you in "Your tickets".</p>
 
       <h2>Anonymous usage count</h2>
       <p>To know how many people use Gachara, the app tells our server that it was opened: once a day, the first time you open it that day. This applies to the Windows app, the Android app, the iPhone app and the web app. What is sent:</p>
@@ -106,6 +112,7 @@
         <li>Data on your device: until you delete it.</li>
         <li>Account data: until you delete your account.</li>
         <li>Reports: until they are removed, by us or at your request.</li>
+        <li>Answers to polls and ratings: until the message is over, then deleted.</li>
         <li>Usage count: only daily totals, which can't be linked to anyone.</li>
       </ul>
 
@@ -122,7 +129,7 @@
 
     <div lang="it">
       <h1>Informativa sulla privacy</h1>
-      <p class="tenue">Ultimo aggiornamento: 15 ottobre 2026</p>
+      <p class="tenue">Ultimo aggiornamento: 27 ottobre 2026</p>
 
       <div class="riquadro">
         <p><strong>In breve:</strong> Gachara funziona sul tuo dispositivo, PC o telefono. Se non scegli tu di mandare un resoconto o di accedere, niente che ti riguardi esce da lì. L'unica cosa che l'app manda da sola è un conteggio anonimo "aperta oggi", senza niente che ti identifichi, che puoi spegnere. Niente pubblicità, non vendiamo né cediamo i tuoi dati, e non leggiamo mai la memoria dei tuoi giochi né il loro traffico di rete.</p>
@@ -138,6 +145,7 @@
         <li>i dati delle guide che Gachara scarica, e le catture dello schermo che fai con lei;</li>
         <li>se usi l'app in italiano, le traduzioni dei testi delle guide e delle notizie: le fa sul tuo dispositivo un traduttore (quello di Firefox), e nessun testo viene mandato da qualche parte per essere tradotto. Su Windows viaggia con l'app; sul telefono lo scarichi una volta dalle Impostazioni, dalle stesse fonti pubbliche con cui è fatta l'app (l'archivio dei pacchetti npm per il motore, quello dei modelli di Mozilla per il modello inglese → italiano): quegli scaricamenti non mandano niente su di te;</li>
         <li>la cronologia delle pull di Zenless Zone Zero (solo sul PC): quando apri la cronologia delle Signal Search nel gioco, il gioco salva l'indirizzo di quella pagina, con una chiave temporanea, nella sua cache sul tuo PC. Gachara lo legge da lì e chiede al sito del gioco (HoYoverse) le stesse pagine che mostra il gioco. La chiave non si salva e va solo a HoYoverse; le pull restano sul tuo PC;</li>
+<li>la cronologia dei pull di Arknights: Endfield (solo sul PC): allo stesso modo, quando apri la cronologia dei pull nel gioco, il launcher tiene nella sua cache sul tuo PC un permesso temporaneo, di sola lettura, per quella pagina. Gachara lo legge da lì e chiede al sito del gioco (Gryphline) le stesse pagine, da solo al massimo una volta al giorno o quando premi Leggi adesso. Il permesso non si salva e va solo a Gryphline; i pull restano sul tuo PC;</li>
 <li>le sessioni dei siti ufficiali dei giochi a cui accedi dentro Gachara (per esempio Blablalink per NIKKE, HoYoLAB per Zenless Zone Zero). L'accesso lo fai direttamente con quei siti: Gachara non vede e non salva mai la tua password, e legge solo quello che la pagina mostra a te;</li>
         <li>sul telefono, le notifiche che Gachara prepara per i tre giorni successivi (un Solo Raid che finisce, un banner che vale, una scadenza di Dokkan): le tiene il telefono e le mostra al momento giusto, senza nessun server in mezzo;</li>
         <li>le copie di sicurezza che fai nelle Impostazioni: un file salvato dove scegli tu (sul PC una cartella, sul telefono dove lo mandi dal menu di condivisione). Non arriva mai a noi.</li>
@@ -167,6 +175,11 @@
       </ul>
       <p>I resoconti si salvano nella nostra base di dati su Supabase, il servizio che usiamo per questo. Gli altri giocatori vedono la squadra, gli oggetti e i tentativi che hai condiviso; il testo libero si mostra solo dopo che lo abbiamo letto; le schermate non si mostrano mai in pubblico. Una schermata può contenere il tuo nome nel gioco: se preferisci, ritagliala.</p>
       <p>Ogni resoconto diventa un ticket: in "I tuoi ticket" vedi a che punto è e le nostre risposte, e puoi rispondere. Ticket e messaggi si leggono con il numero a caso della tua installazione, quindi li vede solo la tua installazione; il nick non si mostra mai agli altri giocatori. Cancelliamo i ticket quando non servono più, e puoi chiederci di cancellare i tuoi quando vuoi.</p>
+      <p>Se hai mandato almeno un resoconto, quando apri l'app chiede al nostro server se ci sono risposte nuove ai tuoi ticket, con lo stesso numero a caso, per potertelo dire.</p>
+
+      <h2>I messaggi di Gachara: novità, sondaggi e voti</h2>
+      <p>Quando apri l'app chiede al nostro server i nostri messaggi del momento (una novità, un sondaggio, un voto, l'invito a condividere o ad aiutarci a provare qualcosa). La richiesta dice solo quale delle quattro app usi (Windows, Android, iPhone o web app), per mostrarti i messaggi giusti; niente su di te. Quali messaggi hai già visto resta sul tuo dispositivo.</p>
+      <p>Solo se scegli di rispondere, riceviamo: la risposta (la tua scelta in un sondaggio, o le stelle e il commento facoltativo di un voto), quale delle quattro app usi e il numero a caso della tua installazione, che serve solo a tenere una risposta per installazione. Le risposte le guardiamo solo come totali e commenti, e le cancelliamo quando il messaggio è finito. Aderire a una prova manda un normale resoconto (vedi sopra), così possiamo risponderti in "I tuoi ticket".</p>
 
       <h2>Il conteggio anonimo dell'uso</h2>
       <p>Per sapere quante persone usano Gachara, l'app dice al nostro server che è stata aperta: una volta al giorno, la prima volta che la apri quel giorno. Vale per l'app Windows, l'app Android, l'app iPhone e la web app. Cosa si manda:</p>
@@ -193,6 +206,7 @@
         <li>I dati sul tuo dispositivo: finché non li cancelli.</li>
         <li>I dati dell'account: finché non cancelli l'account.</li>
         <li>I resoconti: finché non vengono tolti, da noi o perché ce lo chiedi.</li>
+        <li>Le risposte a sondaggi e voti: finché il messaggio non è finito, poi si cancellano.</li>
         <li>Il conteggio dell'uso: solo totali del giorno, che non si possono collegare a nessuno.</li>
       </ul>
 
