@@ -1,1 +1,0 @@
-import{l,r as u}from"./avvio-app-BvjRnLSB.js";const c={};function p(a){const[t,o]=l(`resoconti:${a}`,c),s=t&&typeof t=="object"?t:c,i=u.useCallback((n,r)=>{const e={...s};r?e[n]=r:delete e[n],o(e)},[t,o]);return{resoconti:s,salva:i}}export{p as u};
