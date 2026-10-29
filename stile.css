@@ -86,6 +86,14 @@
   --chiaro: #f7f2e6;
 }
 
+/* Honkai: Star Rail (2026-10-29): il rosa dei capelli di March 7th, come nell'app. */
+[data-gioco="star-rail"] {
+  --accento: #ff8fc7;
+  --accento-due: #ffb8dc;
+  --sopra-accento: #2a0a1a;
+  --chiaro: #ffb8dc;
+}
+
 /* Arknights: Endfield (2026-10-27): il lime, come nell'app. */
 [data-gioco="endfield"] {
   --accento: #a6d80f;
