@@ -15,18 +15,18 @@
       "tintColor": "19C3D6",
       "category": "utilities",
       "screenshotURLs": [],
-      "version": "1.47.0",
-      "versionDate": "2026-11-01T13:31:03Z",
-      "versionDescription": "Gachara 1.47.0",
-      "downloadURL": "https://github.com/Axel3614/gachadex-releases/releases/download/v1.47.0/Gachara-1.47.0.ipa",
-      "size": 7963589,
+      "version": "1.50.0",
+      "versionDate": "2026-11-04T11:20:45Z",
+      "versionDescription": "Gachara 1.50.0",
+      "downloadURL": "https://github.com/Axel3614/gachadex-releases/releases/download/v1.50.0/Gachara-1.50.0.ipa",
+      "size": 8061275,
       "versions": [
         {
-          "version": "1.47.0",
-          "date": "2026-11-01T13:31:03Z",
-          "localizedDescription": "Gachara 1.47.0",
-          "downloadURL": "https://github.com/Axel3614/gachadex-releases/releases/download/v1.47.0/Gachara-1.47.0.ipa",
-          "size": 7963589,
+          "version": "1.50.0",
+          "date": "2026-11-04T11:20:45Z",
+          "localizedDescription": "Gachara 1.50.0",
+          "downloadURL": "https://github.com/Axel3614/gachadex-releases/releases/download/v1.50.0/Gachara-1.50.0.ipa",
+          "size": 8061275,
           "minOSVersion": "15.0"
         }
       ],
